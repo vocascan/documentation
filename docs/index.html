@@ -57,6 +57,10 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css"
+    />
     <link rel="stylesheet" href="_media/style/style.css" />
     <link rel="icon" href="_media/logo/favicon.ico" />
   </head>
@@ -66,11 +70,12 @@
     <script>
       window.$docsify = {
         repo: 'vocascan/documentation',
-        maxLevel: 4,
-        // loadSidebar: true,
+        loadSidebar: true,
         logo: '_media/logo/color-round.svg',
         name: 'vocascan',
         search: 'auto',
+        homepage: 'home.md',
+        themeColor: '#727cf5',
         formatUpdated: '{DD}.{MM}.{YYYY} {HH}:{mm}',
         plugins: [
           function (hook, vm) {
@@ -90,6 +95,11 @@
             });
           },
         ],
+        toc: {
+          scope: '.markdown-section',
+          headings: 'h1, h2, h3, h4, h5, h6',
+          title: 'Table of Contents',
+        },
       };
     </script>
 
@@ -98,5 +108,6 @@
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+    <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
   </body>
 </html>
