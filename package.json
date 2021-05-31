@@ -1,0 +1,26 @@
+{
+  "name": "documentation",
+  "version": "1.0.0",
+  "description": "Documentation for the vocascan project",
+  "main": "index.js",
+  "scripts": {
+    "start": "docsify serve ./docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vocascan/documentation.git"
+  },
+  "keywords": [
+    "vocascan",
+    "documentation"
+  ],
+  "author": "vocascan <vocascan@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vocascan/documentation/issues"
+  },
+  "homepage": "https://github.com/vocascan/documentation#readme",
+  "dependencies": {
+    "docsify": "^4.12.1"
+  }
+}
