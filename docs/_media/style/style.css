@@ -1,3 +1,11 @@
+:root {
+  --text-color-tertiary: #727cf5;
+}
+
 .app-name img {
   width: 40%;
+}
+
+.content {
+  bottom: unset;
 }
