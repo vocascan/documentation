@@ -10,3 +10,15 @@
 .content {
   bottom: unset;
 }
+
+@media screen and (max-width: 768px) {
+  #docsify-darklight-theme {
+    left: unset;
+  }
+}
+
+@media screen and (min-width: 1301px) {
+  .page_toc {
+    border-left: 1px solid var(--borderColor);
+  }
+}
