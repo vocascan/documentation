@@ -5,6 +5,7 @@
 - General
 
   - [Quick start](general/quickstart.md)
+  - [FAQ](general/faq.md)
 
 - Vocascan-Desktop
 
