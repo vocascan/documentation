@@ -1,0 +1,25 @@
+name: lint
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: install
+        run: npm i
+
+      - name: prettier markdown
+        run: npm run lint:prettier
+
+      - name: lint markdown
+        if: always()
+        run: npm run lint:md
