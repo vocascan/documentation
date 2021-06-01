@@ -35,7 +35,12 @@
       content="https://vocascan.github.io/documentation/_media/logo/vocascan-github-cover.png"
     />
 
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
+      title="docsify-darklight-theme"
+      type="text/css"
+    />
     <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css" />
     <link rel="stylesheet" href="_media/style/style.css" />
     <link rel="icon" href="_media/logo/favicon.ico" />
@@ -69,6 +74,35 @@
           headings: "h1, h2, h3, h4, h5, h6",
           title: "Table of Contents",
         },
+        darklightTheme: {
+          defaultTheme: "dark",
+          dark: {
+            accent: "#727cf5",
+            toogleBackground: "#ffffff",
+            background: "#091a28",
+            textColor: "#b4b4b4",
+            codeTextColor: "#ffffff",
+            codeBackgroundColor: "#0e2233",
+            borderColor: "#0d2538",
+            blockQuoteColor: "#858585",
+            highlightColor: "#ff9121",
+            sidebarSublink: "#b4b4b4",
+            codeTypeColor: "#ffffff",
+          },
+          light: {
+            accent: "#727cf5",
+            toogleBackground: "#091a28",
+            background: "#ffffff",
+            textColor: "#34495e",
+            codeTextColor: "#525252",
+            codeBackgroundColor: "#f8f8f8",
+            borderColor: "rgba(0, 0, 0, 0.07)",
+            blockQuoteColor: "#858585",
+            highlightColor: "#e96900",
+            sidebarSublink: "#b4b4b4",
+            codeTypeColor: "#091a28",
+          },
+        },
       };
     </script>
 
@@ -78,5 +112,6 @@
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
     <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 :root {
   --text-color-tertiary: #727cf5;
+  --toc-width: 260px;
 }
 
 .app-name img {
