@@ -16,3 +16,7 @@
   - [Intro](vocascan-server/intro.md)
   - [Installation](vocascan-server/installation.md)
   - [Configuration](vocascan-server/configuration.md)
+
+- Contributing
+
+  - [Translations](contributing/translations.md)
