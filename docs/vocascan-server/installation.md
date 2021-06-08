@@ -114,13 +114,48 @@ There are ready-to-use images for docker.
    curl "https://raw.githubusercontent.com/vocascan/vocascan-server/main/docker/docker-compose.yml" -o docker-compose.yml
    ```
 
-4. Configure vocascan-server
+4. Configure vocascan-server and database
 
    ```bash
    nano docker-compose.yml
    ```
+   
+   Example:
+   
+   Please type in a strong password for you db and jwt-secret (npm run jwt-secret)
+   
+   ```yml
+   version: '3.8'
+   services:
+      vocascan:
+         image: vocascan/vocascan-server
+         restart: always
+         tty: true
+         depends_on:
+            - db
+         environment:
+            PORT: '8000'
+            DB_DIALECT: 'postgres'
+            DB_HOST: 'db'
+            DB_PORT: '5432'
+            DB_USERNAME: 'vocascan'
+            DB_PASSWORD: ''
+            DB_DATABASE: 'vocascan'
+            SALT_ROUNDS: '10'
+            JWT_SECRET: ''
+         ports:
+            - '8000:8000'
+      db:
+         image: postgres
+         environment:
+            POSTGRES_USER: 'vocascan'
+            POSTGRES_PASSWORD: ''
+            POSTGRES_DB: 'vocascan'
+         volumes:
+            - './database:/var/lib/postgresql/data'
+   ```
 
-   For details about the environment variables see [configuration guide](./Configuration).
+   For details about the environment variables see [configuration guide](configuration).
 
 5. Start vocascan-server
 
