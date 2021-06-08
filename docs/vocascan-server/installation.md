@@ -32,8 +32,14 @@ There are two ways to set up the vocascan-server.
    ```bash
    cd vocascan-server
    ```
+   
+5. Install npm packages
 
-5. Configure your server.
+   ```bash
+   npm install
+   ```
+
+6. Configure your server.
 
    Copy the .env.example file
 
@@ -49,13 +55,13 @@ There are two ways to set up the vocascan-server.
 
    For more details about the environment variables see [configuration guide](configuration).
 
-6. Start vocascan-server
+7. Start vocascan-server
 
    ```bash
    pm2 start server.js --name vocascan-server
    ```
 
-7. Enable pm2 startup on reboot
+8. Enable pm2 startup on reboot
 
    ```bash
    pm2 startup
@@ -64,7 +70,7 @@ There are two ways to set up the vocascan-server.
    For deeper options on pm2, check out their
    [documentation](https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/).
 
-8. Save process list
+9. Save process list
 
    ```bash
    pm2 save
