@@ -30,18 +30,16 @@
    npm install
    ```
    
-For testing you can run Vocascan via the command line:
-
 5. Start Vocascan
-
+   - For testing you can run Vocascan via the command line:
+   
    ```bash
    npm run start
    ```
    
-But if you want to build it, to get a finished installer, AppImage, etc you can use this:
-
-6. Build Vocascan
-
+   - But if you want to build it, to get a finished installer, AppImage, etc you can use this:
+   
    ```bash
    npm run build
    ```
+   this command will create you installers and executables depending on which OS you are using.
