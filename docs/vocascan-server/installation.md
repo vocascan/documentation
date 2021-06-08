@@ -32,7 +32,7 @@ There are two ways to set up the vocascan-server.
    ```bash
    cd vocascan-server
    ```
-   
+
 5. Install npm packages
 
    ```bash
@@ -119,40 +119,40 @@ There are ready-to-use images for docker.
    ```bash
    nano docker-compose.yml
    ```
-   
+
    Example:
-   
+
    Please type in a strong password for you db and jwt-secret (npm run jwt-secret)
-   
+
    ```yml
-   version: '3.8'
+   version: "3.8"
    services:
-      vocascan:
-         image: vocascan/vocascan-server
-         restart: always
-         tty: true
-         depends_on:
-            - db
-         environment:
-            PORT: '8000'
-            DB_DIALECT: 'postgres'
-            DB_HOST: 'db'
-            DB_PORT: '5432'
-            DB_USERNAME: 'vocascan'
-            DB_PASSWORD: ''
-            DB_DATABASE: 'vocascan'
-            SALT_ROUNDS: '10'
-            JWT_SECRET: ''
-         ports:
-            - '8000:8000'
-      db:
-         image: postgres
-         environment:
-            POSTGRES_USER: 'vocascan'
-            POSTGRES_PASSWORD: ''
-            POSTGRES_DB: 'vocascan'
-         volumes:
-            - './database:/var/lib/postgresql/data'
+     vocascan:
+       image: vocascan/vocascan-server
+       restart: always
+       tty: true
+       depends_on:
+         - db
+       environment:
+         PORT: "8000"
+         DB_DIALECT: "postgres"
+         DB_HOST: "db"
+         DB_PORT: "5432"
+         DB_USERNAME: "vocascan"
+         DB_PASSWORD: ""
+         DB_DATABASE: "vocascan"
+         SALT_ROUNDS: "10"
+         JWT_SECRET: ""
+       ports:
+         - "8000:8000"
+     db:
+       image: postgres
+       environment:
+         POSTGRES_USER: "vocascan"
+         POSTGRES_PASSWORD: ""
+         POSTGRES_DB: "vocascan"
+       volumes:
+         - "./database:/var/lib/postgresql/data"
    ```
 
    For details about the environment variables see [configuration guide](configuration).

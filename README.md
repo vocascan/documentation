@@ -48,3 +48,14 @@ The files are linted with markdownlint and pretty formatted with prettier. Lint 
    ```bash
    npm run lint:fix
    ```
+
+## Guidelines
+
+### Syntax highlighting
+
+If you need syntax highlighting for other languages feel free to add the [prism.js](https://prismjs.com/) component to
+the `index.html` file.
+
+1. Goto the [all supported languages](https://prismjs.com/#supported-languages) page
+2. Search for your language
+3. Open `index.html` and add your language after the others
