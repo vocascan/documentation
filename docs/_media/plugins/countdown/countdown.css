@@ -1,6 +1,11 @@
+#vocascan > .anchor > span {
+  color: #727cf5;
+}
+
 .countdown ul {
   width: 100%;
   max-width: unset !important;
+  margin: 3em auto !important;
 }
 
 .countdown ul li {
@@ -9,13 +14,113 @@
   list-style-type: none;
   padding: 0 1em;
   text-transform: uppercase;
-  border: 2px solid #fff;
+  /* border: 2px solid #fff; */
   border-radius: 15px;
   margin: 8px;
   min-width: 250px;
 }
 
-.countdown ul li span {
+.days,
+.hours,
+.minutes,
+.seconds {
   display: block;
   font-size: 4.5rem;
+  color: #727cf5;
+  line-height: 4.5rem;
+}
+
+.unit {
+  font-size: 1.2rem;
+  color: rgb(180, 180, 180);
+}
+
+@media screen and (max-width: 1109px) {
+  .countdown ul li {
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 909px) {
+  .countdown ul li {
+    min-width: 150px;
+  }
+}
+
+@media screen and (max-width: 709px) {
+  .countdown ul li {
+    min-width: 100px;
+  }
+
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media screen and (max-width: 583px) {
+  .countdown ul li {
+    padding: 0 0.2em;
+    min-width: 60px;
+  }
+
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .countdown ul li {
+    padding: 0;
+    margin: 0 4px;
+    min-width: 80px;
+  }
+
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .unit {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .countdown ul li {
+    min-width: 70px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .countdown ul {
+    padding-inline-start: 0 !important;
+  }
+
+  .countdown ul li {
+    margin: 0 4px;
+    min-width: 60px;
+  }
+
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  .unit {
+    font-size: 0.9rem;
+  }
 }
