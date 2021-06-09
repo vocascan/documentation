@@ -73,7 +73,8 @@
         ],
         toc: {
           scope: ".markdown-section",
-          headings: "h1, h2, h3, h4, h5, h6",
+          headings:
+            "h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6",
           title: "Table of Contents",
         },
         darklightTheme: {
@@ -95,7 +96,7 @@
           light: {
             accent: "#727cf5",
             toogleBackground: "#091a28",
-            coverBackground: "#091a28",
+            coverBackground: "#ffffff",
             background: "#ffffff",
             textColor: "#34495e",
             codeTextColor: "#525252",
@@ -106,11 +107,6 @@
             sidebarSublink: "#b4b4b4",
             codeTypeColor: "#091a28",
           },
-        },
-        progress: {
-          position: "top",
-          color: "var(--theme-color,#727cf5)",
-          height: "3px",
         },
       };
     </script>
@@ -124,7 +120,6 @@
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
     <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
 
     <!-- Own plugins -->
     <script src="_media/plugins/countdown/countdown.js"></script>
