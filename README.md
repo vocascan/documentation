@@ -21,7 +21,7 @@ folder with a webserver.
 
 2. With python
 
-   If you already have python installed you can use the `http.server` module to server the static `docs` folder.
+   If you already have python installed you can use the `http.server` module to serve the static `docs` folder.
 
    ```bash
    cd docs && python -m http.server 3000
