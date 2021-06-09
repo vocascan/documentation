@@ -4,6 +4,7 @@
 
 ## Final Release v1.0.0
 
+<!-- markdownlint-disable-next-line MD033 -->
 <div class="countdown" data-end-date="2021-06-13T15:00:00Z" data-finish-label=""></div>
 
 [GitHub](https://github.com/vocascan/) [Get Started](#welcome-to-vocascan)
