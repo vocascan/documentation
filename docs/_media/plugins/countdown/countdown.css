@@ -1,0 +1,21 @@
+.countdown ul {
+  width: 100%;
+  max-width: unset !important;
+}
+
+.countdown ul li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 0 1em;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  margin: 8px;
+  min-width: 250px;
+}
+
+.countdown ul li span {
+  display: block;
+  font-size: 4.5rem;
+}
