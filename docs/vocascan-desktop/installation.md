@@ -7,6 +7,25 @@
 3. install vocascan-desktop
 4. login to your server
 
+## Install Vocascan using the Snap store
+
+<a href="https://snapcraft.io/vocascan-desktop">
+  <img alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" />
+</a>
+
+1. Install snap
+
+   ```bash
+   sudo apt install snapd
+   ```
+
+2. Install Vocascan snap
+
+   ```bash
+   sudo snap install vocascan-desktop
+   ```
+   Vocascan should be installed on your PC now
+
 ## Build Vocascan yourself
 
 1. Install node, npm and git
