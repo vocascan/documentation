@@ -10,4 +10,4 @@ will be needed.
 
 ### Why is there no official server yet?
 
-Due to data protection reasons (DSGVO), there is currently no official vocascan-server hosted.
+Due to data protection reasons (GDPR), there is currently no official vocascan-server hosted.

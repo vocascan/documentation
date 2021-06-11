@@ -2,7 +2,7 @@
 
 Quick start guide for vocascan.
 
-Vocascan is a server-client based vocabulary trainer. Due to data protection reasons (DSGVO), we can't provide an
+Vocascan is a server-client based vocabulary trainer. Due to data protection reasons (GDPR), we can't provide an
 official server, which means that you have to host your own (or at least run it locally) unfortunatelly. But setting up
 is very easy with our [guide](vocascan-server/installation).
 
