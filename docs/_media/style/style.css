@@ -11,6 +11,10 @@
   bottom: unset;
 }
 
+.body.close .content {
+  left: unset;
+}
+
 @media screen and (max-width: 768px) {
   #docsify-darklight-theme {
     left: unset;
