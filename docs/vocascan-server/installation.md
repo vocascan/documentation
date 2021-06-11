@@ -1,11 +1,11 @@
 # Installation
 
-This guide will get you through the installation of your own Vocascan server.
+This guide will get you through the installation of your own vocascan-server installation.
 
-There are two ways to set up the vocascan-server.
+There are two ways to set up the a server.
 
-1. run with pm2
-1. run in docker contianer
+1. [PM2](#_1-pm2)
+2. [Docker](#_2-docker)
 
 ## 1. PM2
 
@@ -76,7 +76,7 @@ There are two ways to set up the vocascan-server.
    pm2 save
    ```
 
-## 2. docker
+## 2. Docker
 
 There are ready-to-use images for docker.
 

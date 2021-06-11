@@ -1,17 +1,27 @@
 # Installation
 
-## Installer
+This guide will get you through the installation of your own vocascan-desktop installation.
+
+There are three ways to install vocascan-desktop.
+
+1. [Installer](#_1-installer)
+2. [Snap store](#_2-snap-store)
+3. [Build vocascan yourself](#_3-build-vocascan-yourself)
+
+## 1. Installer
 
 1. goto the vocascan-desktop [release page](https://github.com/vocascan/vocascan-desktop/releases)
 2. download the latest release for your platform
 3. install vocascan-desktop
 4. login to your server
 
-## Install Vocascan using the Snap store
+## 2. Snap store
 
 <a href="https://snapcraft.io/vocascan-desktop">
   <img alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" />
 </a>
+
+On ubuntu systems snap is preinstalled. So you are able to use the ubuntu software manager. 
 
 1. Install snap
 
@@ -26,7 +36,7 @@
    ```
    Vocascan should be installed on your PC now
 
-## Build Vocascan yourself
+## 3. Build Vocascan yourself
 
 1. Install node, npm and git
 
