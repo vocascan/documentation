@@ -17,9 +17,7 @@ There are three ways to install vocascan-desktop.
 
 ## 2. Snap store
 
-<a href="https://snapcraft.io/vocascan-desktop">
-  <img alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" />
-</a>
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/vocascan-desktop)
 
 On ubuntu systems snap is preinstalled. So you are able to use the ubuntu software manager. 
 
