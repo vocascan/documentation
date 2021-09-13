@@ -53,7 +53,7 @@ There are two ways to set up the a server.
    nano .env
    ```
 
-   For more details about the environment variables see [configuration guide](configuration).
+   For more details about the environment variables see [configuration guide](vocascan-server/configuration).
 
 7. Start vocascan-server
 
@@ -155,7 +155,7 @@ There are ready-to-use images for docker.
          - "./database:/var/lib/postgresql/data"
    ```
 
-   For details about the environment variables see [configuration guide](configuration).
+   For details about the environment variables see [configuration guide](vocascan-server/configuration).
 
 5. Start vocascan-server
 
