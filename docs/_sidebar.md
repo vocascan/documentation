@@ -18,6 +18,7 @@
   - [Intro](vocascan-server/intro.md)
   - [Installation](vocascan-server/installation.md)
   - [Configuration](vocascan-server/configuration.md)
+  - [Logging](vocascan-server/logging.md)
   - [Contribute](vocascan-server/contribute.md)
   - [Changelog](vocascan-server/changelog.md)
 

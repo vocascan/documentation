@@ -33,10 +33,10 @@
    Copy the env config file template to configure your server.
 
    ```bash
-   cp .env.example .env
+   cp vocascan.config.example.js vocascan.config.js
    ```
 
-   Fill out your `.env` file. For a complete guide for each option see [configuration](vocascan-server/configuration)
+   Fill out the config file. For a complete guide for each option see [configuration](vocascan-server/configuration)
 
 7. Run in dev mode
 
