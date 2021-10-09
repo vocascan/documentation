@@ -65,14 +65,25 @@ first `_` isn't necessary, because it will be replaced by default.
 As you may already noticed, its possible to use javascript operations inside the template. This can be used to check if
 a context variable is empty and then display another string.
 
+This can also be used to log dates.
+
+```js
+{{new Date().toISOString()}} - {{.level}}: {{.message}}
+```
+
 ### Context
 
-Following context are available for the following groups.
+Context describes the variables available from inside a template. There is a global context which is available to all
+groups and a specific context for each logging group.
+
+#### Global
+
+- `chalk` - reference to the [chalk](https://www.npmjs.com/package/chalk) package to output colorized log messages
 
 #### Default group
 
 - `level` - log level
-- `mesage` - log message
+- `message` - log message
 - any other keys that are available in the message object
 
 #### SQL group
