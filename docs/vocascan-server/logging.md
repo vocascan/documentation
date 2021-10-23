@@ -52,15 +52,15 @@ VOCASCAN__MYCUSTOMLOGGER1__HANDLE_EXCEPTIONS=false
 
 It is also possible to define custom formats for each logging group (`default`, `sql`, `router`). The formats are
 defined with a template syntax. The javascript template syntax starts with two round brackets `{{` and ends with two
-`}}`. Between the brackets you can use any valid javascript. The context variables are available with an underscore. The
-first `_` isn't necessary, because it will be replaced by default.
+`}}`. Between the brackets you can use any valid javascript. The context variables are available within the global
+scope.
 
 ### Example
 
-- **Default Group** - `{{.level}}: {{.message}}`
-- **SQL Group** - `{{.message}}`
+- **Default Group** - `{{level}}: {{message}}`
+- **SQL Group** - `{{message}}`
 - **Router Group** -
-  `{{.tokens.remoteAddr}} - "{{.req.user ? _.req.user.username : "no user"}}" {{.tokens.date("clf")}} "{{.tokens.method}} {{.tokens.url}}" {{.tokens.colorizedStatus}} {{.tokens.res("content-length")}} "{{.tokens.userAgent}}" - {{.tokens.responseTime(3)}}ms`
+  `{{tokens.remoteAddr}} - "{{req.user ? req.user.username : "no user"}}" {{tokens.date("clf")}} "{{tokens.method}} {{tokens.url}}" {{tokens.colorizedStatus}} {{tokens.res("content-length")}} "{{tokens.userAgent}}" - {{tokens.responseTime(3)}}ms`
 
 As you may already noticed, its possible to use javascript operations inside the template. This can be used to check if
 a context variable is empty and then display another string.
@@ -68,7 +68,7 @@ a context variable is empty and then display another string.
 This can also be used to log dates.
 
 ```js
-{{new Date().toISOString()}} - {{.level}}: {{.message}}
+{{new Date().toISOString()}} - {{level}}: {{message}}
 ```
 
 ### Context
