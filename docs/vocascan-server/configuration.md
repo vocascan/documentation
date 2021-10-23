@@ -7,29 +7,29 @@ There are 2 ways to configure a vocascan-server.
   not set, vocascan search for a file called `vocascan.config.js` or `vocascan.config.json` in the vocascan root
   directory.
 
-- 2. **2. Environment variables**: You can also set all options available via the config file also via environment
-     variables. To achieve this vocascan parses all env variables starting with `VOCASCAN__`. Then you can use two
-     underlines to replicate the paths in the config file. For example, the following config example in environment
-     variables would be the following.
+- **2. Environment variables**: You can also set all options available via the config file also via environment
+  variables. To achieve this vocascan parses all env variables starting with `VOCASCAN__`. Then you can use two
+  underlines to replicate the paths in the config file. For example, the following config example in environment
+  variables would be the following.
 
-     ```js
-     module.exports = {
-       debug: false,
+  ```js
+  module.exports = {
+    debug: false,
 
-       server: {
-         port: 5000,
-         jwt_secret: "abc",
-         salt_rounds: 10,
-       },
-     };
-     ```
+    server: {
+      port: 5000,
+      jwt_secret: "abc",
+      salt_rounds: 10,
+    },
+  };
+  ```
 
-     ```bash
-     VOCASCAN__DEBUG=false
-     VOCASCAN__SERVER__PORT=5000
-     VOCASCAN__SERVER__JWT_SECRET=abc
-     VOCASCAN__SERVER__SALT_ROUNDS=10
-     ```
+  ```bash
+  VOCASCAN__DEBUG=false
+  VOCASCAN__SERVER__PORT=5000
+  VOCASCAN__SERVER__JWT_SECRET=abc
+  VOCASCAN__SERVER__SALT_ROUNDS=10
+  ```
 
 !> **Note:** You need to restart vocascan that the settings take affect.
 
@@ -41,11 +41,12 @@ There are 2 ways to configure a vocascan-server.
 
 ## Server (`server`)
 
-| Name          | Default | Description                                                                                                                                                                               |
-| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `port`        | `5000`  | Defines the port on which vocascan is listen on                                                                                                                                           |
-| `jwt_secret`  |         | Secret is used to sign the payload of the jwt token, change this to a unique string. Everyone who knows that secret is able to act as other vocascan users.                               |
-| `salt_rounds` | `10`    | The salt rounds define the coast efficiency factor to hash passwords with bcrypt. For more info see [bcrypts documentation](https://github.com/kelektiv/node.bcrypt.js#a-note-on-rounds). |
+| Name                  | Default | Description                                                                                                                                                                               |
+| --------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `port`                | `5000`  | Defines the port on which vocascan is listen on                                                                                                                                           |
+| `jwt_secret`          |         | Secret is used to sign the payload of the jwt token, change this to a unique string. Everyone who knows that secret is able to act as other vocascan users.                               |
+| `salt_rounds`         | `10`    | The salt rounds define the coast efficiency factor to hash passwords with bcrypt. For more info see [bcrypts documentation](https://github.com/kelektiv/node.bcrypt.js#a-note-on-rounds). |
+| `registration_locked` | `false` | Locks the server registration and allows register only with an invite code.                                                                                                               |
 
 ## Database (`database`)
 
