@@ -102,3 +102,9 @@ For more infos about the logger section see [logging guide](vocascan-server/logg
 | `max_size`     |         | Max size in bytes of the log file, if the size is exceeded then a new file is created, a counter will become a suffix of the log file. |
 | `max_files`    |         | Limit the number of files created when the size of the log file is exceeded.                                                           |
 | `archive_logs` |         | If true, all log files but the current one will be packed into a zip archive.                                                          |
+
+## API (`api`)
+
+| Name      | Default | Description                                   |
+| --------- | ------- | --------------------------------------------- |
+| `swagger` | `true`  | Enables serving of the swagger documentation. |
