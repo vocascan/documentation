@@ -15,6 +15,10 @@
   left: unset;
 }
 
+.markdown-section table {
+  display: table;
+}
+
 @media screen and (max-width: 768px) {
   #docsify-darklight-theme {
     left: unset;
