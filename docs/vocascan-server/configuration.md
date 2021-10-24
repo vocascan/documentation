@@ -104,6 +104,6 @@ For more infos about the logger section see [logging guide](vocascan-server/logg
 
 ## API (`api`)
 
-| Name      | Default | Description                                   |
-| --------- | ------- | --------------------------------------------- |
-| `swagger` | `true`  | Enables serving of the swagger documentation. |
+| Name             | Default | Description                                   |
+| ---------------- | ------- | --------------------------------------------- |
+| `enable_swagger` | `true`  | Enables serving of the swagger documentation. |
