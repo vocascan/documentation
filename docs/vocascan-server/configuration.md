@@ -4,13 +4,13 @@ There are 2 ways to configure a vocascan-server.
 
 - **1. Config File**: You can add an environment variable called `VOCASCAN_CONFIG` to set the path to your config file.
   The file could either be a json or a js file (any file which is importable with `require()`). If `VOCASCAN_CONFIG` is
-  not set, vocascan search for a file called `vocascan.config.js` or `vocascan.config.json` in the vocascan root
+  not set, vocascan searches for a file called `vocascan.config.js` or `vocascan.config.json` in the vocascan root
   directory.
 
-- **2. Environment variables**: You can also set all options available via the config file also via environment
-  variables. To achieve this vocascan parses all env variables starting with `VOCASCAN__`. Then you can use two
-  underlines to replicate the paths in the config file. For example, the following config example in environment
-  variables would be the following.
+- **2. Environment variables**: Another way is setting the config file options via environment variables. To achieve
+  this, vocascan parses all env variables starting with `VOCASCAN__`. Now its possible to place two underlines while
+  replicating the paths in the config file. The following example shows the config file converted into the environment
+  variables way.
 
   ```js
   module.exports = {
@@ -31,7 +31,7 @@ There are 2 ways to configure a vocascan-server.
   VOCASCAN__SERVER__SALT_ROUNDS=10
   ```
 
-!> **Note:** You need to restart vocascan that the settings take affect.
+!> **Note:** You need to restart the server to make the changes effective.
 
 ## Overall
 
@@ -43,10 +43,10 @@ There are 2 ways to configure a vocascan-server.
 
 | Name                  | Default | Description                                                                                                                                                                               |
 | --------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `port`                | `5000`  | Defines the port on which vocascan is listen on                                                                                                                                           |
+| `port`                | `5000`  | Defines the port on which the server is listening.                                                                                                                                        |
 | `jwt_secret`          |         | Secret is used to sign the payload of the jwt token, change this to a unique string. Everyone who knows that secret is able to act as other vocascan users.                               |
 | `salt_rounds`         | `10`    | The salt rounds define the coast efficiency factor to hash passwords with bcrypt. For more info see [bcrypts documentation](https://github.com/kelektiv/node.bcrypt.js#a-note-on-rounds). |
-| `registration_locked` | `false` | Locks the server registration and allows register only with an invite code.                                                                                                               |
+| `registration_locked` | `false` | Locks the server and only allows registrations with an invite code.                                                                                                                       |
 
 ## Database (`database`)
 

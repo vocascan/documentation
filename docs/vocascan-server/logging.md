@@ -1,15 +1,15 @@
 # Logging
 
-You can define different logger transports which delivers the logging entries. Currently there are only two types of
-transports.
+It is possible to define different logger transports that deliver the logging entries.
 
 - `console` - logs to the console
 - `file` - logs into a file
 
-Under the log section in the config, you can add a couple of loggers with their own name. The following config crates
-three logger transports. One named `myCustomLogger1`, `myCustomLogger2` and one named `file`. As you may already
-noticed, the logger called `file` has no `mode` property, because If you use a transport as a logger name, the mode
-automatically stick to the name. So if a logger is called `file`, the mode is automatically set to `file`.
+In the log section of the config file, you can add a couple of loggers while giving them their own name. The following
+config example represents three logger transports. Two named `myCustomLogger1`, `myCustomLogger2` and one named `file`.
+As you might have already noticed, the logger called `file` has no `mode` property, because if the logger name is the
+same as the transport mode, it automatically sticks to the name. In summary, if a logger is called `file`, the mode is
+automatically set to `file`.
 
 For all available options see the log section in the [configuration sheet](vocascan-server/configuration?id=log-log).
 
@@ -39,7 +39,8 @@ module.exports = {
 }
 ```
 
-This configuration can also be archived by only use environment variables. Just a little example for `myCustomLogger1`.
+This configuration can also be archived by only using environment variables. In the following an example for
+`myCustomLogger1`.
 
 ```bash
 VOCASCAN__MYCUSTOMLOGGER1__MODE=console
@@ -62,10 +63,10 @@ scope.
 - **Router Group** -
   `{{tokens.remoteAddr}} - "{{req.user ? req.user.username : "no user"}}" {{tokens.date("clf")}} "{{tokens.method}} {{tokens.url}}" {{tokens.colorizedStatus}} {{tokens.res("content-length")}} "{{tokens.userAgent}}" - {{tokens.responseTime(3)}}ms`
 
-As you may already noticed, its possible to use javascript operations inside the template. This can be used to check if
-a context variable is empty and then display another string.
+As you might have already noticed, it's possible to use javascript operations inside the template. This can be used to
+check if a context variable is empty in order to display another string.
 
-This can also be used to log dates.
+Logging dates will be as simple as this.
 
 ```js
 {{new Date().toISOString()}} - {{level}}: {{message}}
@@ -101,8 +102,8 @@ groups and a specific context for each logging group.
 
   - `url` - The URL of the request.
   - `method` - The http method used for the request.
-  - `responseTime(digits=3)` - The time after the request coming in and the response headers are written.
-  - `totalTime(digits=3)` - The total time after the request coming in and the response is send.
+  - `responseTime(digits=3)` - The time after a request comes in and the response headers are written.
+  - `totalTime(digits=3)` - The total time after a request comes in and the response is send.
   - `date(format)` - Current date. `format` could be `clf`, `iso` or `web`.
   - `status` - The status code of the response.
   - `colorizedStatus` - The colorized status code of the response.
