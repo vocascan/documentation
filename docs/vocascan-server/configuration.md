@@ -7,10 +7,9 @@ There are 2 ways to configure a vocascan-server.
   not set, vocascan searches for a file called `vocascan.config.js` or `vocascan.config.json` in the vocascan root
   directory.
 
-- **2. Environment variables**: Another way is setting the config file options via environment variables. To achieve
-  this, vocascan parses all env variables starting with `VOCASCAN__`. Now its possible to place two underlines while
-  replicating the paths in the config file. The following example shows the config file converted into the environment
-  variables way.
+- **2. Environment variables**: Another way is setting the config file options via environment variables. Vocascan
+  parses all env variables starting with `VOCASCAN__`. To achieve this, place two underscores while replicating the
+  paths in the config file. The following example shows the config file converted into the environment variables way.
 
   ```js
   module.exports = {
