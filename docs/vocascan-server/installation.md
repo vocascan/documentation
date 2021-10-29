@@ -41,19 +41,19 @@ There are two ways to set up the a server.
 
 6. Configure your server.
 
-   Copy the .env.example file
+   Copy the config file template `vocascan.config.example.js`
 
    ```bash
-   cp .env.example .env
+   cp vocascan.config.example.js vocascan.config.js
    ```
 
    Open .env file and fill in your details
 
    ```bash
-   nano .env
+   nano vocascan.config.js
    ```
 
-   For more details about the environment variables see [configuration guide](vocascan-server/configuration).
+   For more details about the configuration see [configuration](vocascan-server/configuration) page.
 
 7. Start vocascan-server
 
@@ -114,48 +114,15 @@ There are ready-to-use images for docker.
    curl "https://raw.githubusercontent.com/vocascan/vocascan-server/main/docker/docker-compose.yml" -o docker-compose.yml
    ```
 
-4. Configure vocascan-server and database
+4. Configure vocascan-server
+
+   As described in the [configuration](vocascan-server/configuration) page, you can either use the config file directly
+   or set the config via environment variables. In the server repository there are sample `docker-compose.yml`
+   configuration files in separate [folders](https://github.com/vocascan/vocascan-server/tree/main/docker).
 
    ```bash
    nano docker-compose.yml
    ```
-
-   Example:
-
-   Please type in a strong password for you db and jwt-secret (npm run jwt-secret)
-
-   ```yml
-   version: "3.8"
-   services:
-     vocascan:
-       image: vocascan/vocascan-server
-       restart: always
-       tty: true
-       depends_on:
-         - db
-       environment:
-         PORT: "8000"
-         DB_DIALECT: "postgres"
-         DB_HOST: "db"
-         DB_PORT: "5432"
-         DB_USERNAME: "vocascan"
-         DB_PASSWORD: ""
-         DB_DATABASE: "vocascan"
-         SALT_ROUNDS: "10"
-         JWT_SECRET: ""
-       ports:
-         - "8000:8000"
-     db:
-       image: postgres
-       environment:
-         POSTGRES_USER: "vocascan"
-         POSTGRES_PASSWORD: ""
-         POSTGRES_DB: "vocascan"
-       volumes:
-         - "./database:/var/lib/postgresql/data"
-   ```
-
-   For details about the environment variables see [configuration guide](vocascan-server/configuration).
 
 5. Start vocascan-server
 
