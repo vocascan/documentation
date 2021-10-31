@@ -19,6 +19,16 @@
   display: table;
 }
 
+.page_toc a,
+.page_toc a:hover {
+  text-decoration: none;
+}
+
+.page_toc a:before {
+  content: "• ";
+  color: var(--textColor);
+}
+
 @media screen and (max-width: 768px) {
   #docsify-darklight-theme {
     left: unset;

@@ -19,6 +19,7 @@
   - [Installation](vocascan-server/installation.md)
   - [Configuration](vocascan-server/configuration.md)
   - [Logging](vocascan-server/logging.md)
+  - [Command Line Interface](vocascan-server/cli.md)
   - [Contribute](vocascan-server/contribute.md)
   - [Changelog](vocascan-server/changelog.md)
 
