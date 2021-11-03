@@ -87,13 +87,13 @@ Deletes a vocascan-user
 
 ### generate
 
-generate secrets to use in the config file
+generation functions for strings needed for config files
 
 **Subcommands:**
 
 #### secret [type]
 
-Generates a secret of the given type.
+generate secrets to use in the config file
 
 Types:
 
