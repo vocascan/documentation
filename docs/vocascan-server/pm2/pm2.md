@@ -38,7 +38,7 @@
    cp vocascan.config.example.js vocascan.config.js
    ```
 
-   Open .env file and fill in your details
+   Open config file and fill in your details
 
    ```bash
    nano vocascan.config.js
