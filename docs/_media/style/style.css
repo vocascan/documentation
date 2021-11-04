@@ -19,6 +19,10 @@
   display: table;
 }
 
+.page_toc {
+  position: sticky;
+}
+
 .page_toc a,
 .page_toc a:hover {
   text-decoration: none;
@@ -54,5 +58,42 @@
 @media screen and (min-width: 1830px) {
   .markdown-section pre {
     max-width: 1500px;
+  }
+}
+
+/* Print style */
+@media print {
+  /*
+   * Its basically the same as the mobile style query copied from the original sources with changed widths
+   * https://github.com/mrpotatoes/docsify-toc/blob/cfcda5ea978e77ea9c81c42bcff2cbfd3d226788/dist/toc.css#L71-L98
+   */
+  .page_toc {
+    position: relative;
+    left: 0;
+    top: -20px;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 1em;
+  }
+
+  .nav {
+    margin: 0 auto;
+    width: 800px;
+  }
+
+  .page_toc p.title {
+    font-weight: 300;
+    font-size: 1.8em;
+  }
+
+  .content {
+    display: block;
+    width: 100%;
+    left: 0;
+  }
+
+  .markdown-section {
+    margin: 0 auto;
   }
 }
