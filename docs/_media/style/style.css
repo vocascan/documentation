@@ -19,6 +19,10 @@
   display: table;
 }
 
+.page_toc {
+  position: sticky;
+}
+
 @media screen and (max-width: 768px) {
   #docsify-darklight-theme {
     left: unset;
