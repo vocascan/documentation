@@ -4,7 +4,7 @@ This guide will get you through the installation of your own vocascan-server pai
 Let's Encrypt.
 
 1. First of all you have to install Docker an Docker-Compose. To do this have a look at point 1 and 2 our
-   [guide](vocascan-server/installation#_2-Docker) in the general vocascan-server installation section.
+   [guide](vocascan-server/docker/docker) in the general vocascan-server installation section.
 
 2. After that install `apache2-utils` to create a secure password hash for the Traefik monitoring website with
    `htpasswd`
@@ -51,7 +51,7 @@ Let's Encrypt.
    touch acme.json
    ```
 
-   - give root access to file
+   - make file only accessable by root
 
    ```bash
    chmod 600 acme.json
@@ -84,10 +84,10 @@ Let's Encrypt.
 8. Open `traefik_dynamic.toml`
 
    ```bash
-   nano traefik.toml
+   nano traefik_dynamic.toml
    ```
 
-   - Add the secret key (line 3), you created in the beginning
+   - Add the secret key (line 3), you created in the beginning (step 2)
 
    ```toml
    1    [http.middlewares.simpleAuth.basicAuth]
@@ -111,7 +111,7 @@ Let's Encrypt.
    nano docker-compose.yml
    ```
 
-update your environment variables and replace your domain
+   update your docker variables and replace your domain
 
    ```yml
                                     ...    
@@ -123,37 +123,24 @@ update your environment variables and replace your domain
 10. Start you docker containers
 
    ```bash
-   sudo docker-compose up -d
+   docker-compose up -d
    ```
 
-Your server should now be accessible at `web.vocascan.com`. In addition, a monitoring tool is available at
-`monitor.vocascan.com`, which can be accessed with the login data you created at the beginning.
+Your server should now be accessible at `web.your_domain.com`. In addition, a monitoring tool is available at
+`monitor.your_domain.com`, which can be accessed with the login data you created at the beginning.
 
 The last thing you need to do is finish setting up your new Vocascan server. For this you need to create an admin user.
 
-11. Create a session in your running vocascan-server docker container
+11. Create a session in your running vocascan-server docker container   
 
+   Create a session for the vocascan Docker container
    ```bash
-   docker ps -a
-   ```
-
-   The output will look something like this. We just need the container id
-   ```
-   ~# docker ps
-   CONTAINER ID   IMAGE                                
-   b8c849fc3084   vocascan/vocascan-server:experimental   
-   4dc1d76f3782   traefik:v2.2                          
-   42a7b0cd9fcf   postgres  
-   ```      
-
-   Take the container id from the Vocascan server and create a session
-   ```bash
-   docker exec -it b8c849fc3084 ash
+   docker-compose exec vocascan ash
    ```
 
 12. Create an admin user
 
-   ```bash
+   ```
    /app # node vocascan-server admin user create -u admin -p my_admin_password -e admin -r admin
    ```
    
@@ -162,4 +149,6 @@ The last thing you need to do is finish setting up your new Vocascan server. For
    exit
    ```
 
-   Your setup is now ready and you can start using your server
+   ?> Info: To see every registered user use this [command]("vocascan-server/cli#list")
+
+   Your setup is now ready and you can start using your server. Please remember that the admin user you just created should not be used as a regular account. Please create another one for your daily use.

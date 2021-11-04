@@ -16,6 +16,12 @@ There are ready-to-use images for docker.
    sudo apt install docker-ce
    ```
 
+   If you want to make things more simple you can use the command from the GetDocker Guide
+   ```bash
+   curl -fsSL https://get.docker.com -o get-docker.sh
+   sudo sh get-docker.sh
+   ```
+
 2. Install docker-compose
 
    Download docker-compose binary
@@ -30,23 +36,48 @@ There are ready-to-use images for docker.
    sudo chmod +x /usr/local/bin/docker-compose
    ```
 
-3. Download docker-compose.yml
+3. Configure vocascan-server
 
+   In the server repository there are sample `docker-compose.yml`
+   configuration files in separate [folders](https://github.com/vocascan/vocascan-server/tree/main/docker).
+   As described in the [configuration](vocascan-server/configuration) page: 
+
+   3.1 You can either use the config file directly: 
+      
+   download vocascan.config.js (to use a fully extended config, have a look at this [config file]("https://raw.githubusercontent.com/vocascan/vocascan-server/main/vocascan.config.example.js"))
    ```bash
-   curl "https://raw.githubusercontent.com/vocascan/vocascan-server/main/docker/docker-compose.yml" -o docker-compose.yml
+   curl "https://raw.githubusercontent.com/vocascan/vocascan-server/main/docker/default/vocascan.config.js" -o vocascan.config.js
+   ```
+   download docker-compose file
+   ```bash
+   curl "https://raw.githubusercontent.com/vocascan/vocascan-server/main/docker/default/docker-compose.yml" -o docker-compose.yml
    ```
 
-4. Configure vocascan-server
-
-   As described in the [configuration](vocascan-server/configuration) page, you can either use the config file directly
-   or set the config via environment variables. In the server repository there are sample `docker-compose.yml`
-   configuration files in separate [folders](https://github.com/vocascan/vocascan-server/tree/main/docker).
+   Remember to [configure](vocascan-server/configuration) the files after you needs:
 
    ```bash
    nano docker-compose.yml
    ```
 
-5. Start vocascan-server
+   ```bash
+   nano vocascan.config.js
+   ```
+
+   ---
+   3.2 or set the config via environment variables:
+
+   download docker-compose file
+   ```bash
+   curl "https://raw.githubusercontent.com/vocascan/vocascan-server/main/docker/use-env/docker-compose.yml" -o docker-compose.yml
+   ```
+
+   Remember to [configure](vocascan-server/configuration) the file after you needs:
+
+      ```bash
+      nano docker-compose.yml
+      ```
+
+4. Start vocascan-server
 
    ```bash
    docker-compose up -d
@@ -54,29 +85,16 @@ There are ready-to-use images for docker.
 
    The last thing you need to do is finish setting up your new Vocascan server. For this you need to create an admin user.
 
-6. Create a session in your running vocascan-server docker container
+5. Create a session in your running vocascan-server docker container  
 
+   Create a session for the vocascan Docker container
    ```bash
-   docker ps -a
+   docker-compose exec vocascan ash
    ```
 
-   The output will look something like this. We just need the container id
+6. Create an admin user
+
    ```
-   ~# docker ps
-   CONTAINER ID   IMAGE                                
-   b8c849fc3084   vocascan/vocascan-server:experimental   
-   4dc1d76f3782   traefik:v2.2                          
-   42a7b0cd9fcf   postgres  
-   ```      
-
-   Take the container id from the Vocascan server and create a session
-   ```bash
-   docker exec -it b8c849fc3084 ash
-   ```
-
-7. Create an admin user
-
-   ```bash
    /app # node vocascan-server admin user create -u admin -p my_admin_password -e admin -r admin
    ```
    
@@ -84,5 +102,6 @@ There are ready-to-use images for docker.
    ```bash
    exit
    ```
-
-   Your setup is now ready and you can start using your server
+   ?> Info: To see every registered user use this [command]("vocascan-server/cli#list")
+   
+   Your setup is now ready and you can start using your server. Please remember that the admin user you just created should not be used as a regular account. Please create another one for your daily use.
