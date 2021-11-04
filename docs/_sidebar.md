@@ -27,3 +27,4 @@
 
   - [Intro](contributing/intro.md)
   - [Translations](contributing/translations.md)
+  - [Maintainers](contributing/maintainers.md)
