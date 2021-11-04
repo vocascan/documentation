@@ -26,20 +26,21 @@ manage vocascan users
 
 ##### create
 
-Creates a vocascan-user in the configured database.
+Creates a user in the configured database.
 
 - `-u`, `--username <username>` - username for the new user (required)
 - `-e`, `--email <email>` - email for the new user (required)
 - `-p`, `--password <password>` - password for the new user. If not set, a password of length `48` will be generated and
   printed.
 - `-r`, `--role <name>` - chose a role for the new user. By default there are the following roles `admin`, `user`.
+  (default: `user`)
 
 **Examples**
 
-- `vocascan-server admin user create -u admin -e admin -r admin` - will create a user called `admin`, with their email
-  `admin`, with the `admin` role and a random password.
+- `vocascan-server admin user create -u admin -e admin -r admin` - will create a user called `admin`, email `admin`,
+  role `admin` and a random password.
 - `vocascan-server admin user create -u hans -e hans@gmail.com -r user -p abcdefg` - will create a user called `hans`,
-  with their email `hans@gmail.com`, with the `user` role and a password `abcdefg`.
+  email `hans@gmail.com`, role `user` and a password `abcdefg`.
 
 !> it does not have to be a real email, it's only a login name with which you can log in to vocascan-server
 
@@ -56,7 +57,7 @@ Lists all users registered in the configured database.
 
 ##### update
 
-Update a vocascan-user
+Update a user.
 
 - `-i`, `--id <id>` - id to identify the user (one of `--id` or `--username` is required)
 - `-u`, `--username <username>` - username to identify the user (one of `--id` or `--username` is required)
@@ -71,7 +72,7 @@ Update a vocascan-user
 
 ##### delete
 
-Deletes a vocascan-user
+Deletes a user.
 
 - `-i`, `--id <id>` - id to identify the user (one of `--id` or `--username` is required)
 - `-u`, `--username <username>` - username to identify the user (one of `--id` or `--username` is required)
@@ -80,14 +81,14 @@ Deletes a vocascan-user
 
 **Examples**
 
-- `vocascan-server admin user delete -u hans` - will completely delete the user named `hans` after your interactive
+- `vocascan-server admin user delete -u hans` - will completely delete the user named `hans` after you interactively
   confirm
 - `vocascan-server admin user delete -i bd9c643e-c820-4b0c-bd04-f2d93f4e4dcb -y` - will completely delete the user with
-  the id `bd9c643e-c820-4b0c-bd04-f2d93f4e4dcb` without confirm (you set `--yes`)
+  the id `bd9c643e-c820-4b0c-bd04-f2d93f4e4dcb` without confirming (you set `--yes`)
 
 ### generate
 
-generation functions for strings needed for config files
+generation functions for strings needed in config files
 
 **Subcommands:**
 
@@ -101,7 +102,7 @@ Types:
 
 **Examples**
 
-- `vocascan-server generate secret JWT_SECRET` - will generate a random string which you can use in your config as a
+- `vocascan-server generate secret JWT_SECRET` - will generate a random string which can be used in your config as a
   `server.jwt_secret`
 
 ### web
