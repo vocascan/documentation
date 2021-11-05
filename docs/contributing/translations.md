@@ -18,7 +18,7 @@ Here is everything you need to know while translating.
   `you solved {{percentage}}% of the vocabulary correctly!` should have the placeholder `{{percentage}}`, the `%`- sign
   and the `!` at the end.
 
-- Address the user directly. (In German the "du" form)
+- Address the user directly. (In German, the "du" form)
 
   `You can create vocab cards while deciding which package and group they belong to.` uses the "you" - form. And in
   German the "du" - form.
