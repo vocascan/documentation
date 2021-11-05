@@ -4,7 +4,7 @@ There are ready-to-use images for docker.
 
 1. Install docker
 
-   Since docker is not up to date in the official apt sources, we add the official docker sources to apt.
+   Since docker is not up-to-date in the official apt sources, we add the official docker sources to apt.
 
    ```bash
    sudo apt update
@@ -16,7 +16,7 @@ There are ready-to-use images for docker.
    sudo apt install docker-ce
    ```
 
-   If you want to make things more simple you can use the command from the GetDocker Guide
+   If you want to make things more simple, you can use the command from the GetDocker Guide
    ```bash
    curl -fsSL https://get.docker.com -o get-docker.sh
    sudo sh get-docker.sh
@@ -53,7 +53,7 @@ There are ready-to-use images for docker.
    curl "https://raw.githubusercontent.com/vocascan/vocascan-server/main/docker/default/docker-compose.yml" -o docker-compose.yml
    ```
 
-   Remember to [configure](vocascan-server/configuration) the files after you needs:
+   Remember to [configure](vocascan-server/configuration) the files after your needs:
 
    ```bash
    nano docker-compose.yml

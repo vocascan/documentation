@@ -3,23 +3,17 @@
 This guide will get you through the installation of your own vocascan-server paired with Traefik as a reverse proxy and
 Let's Encrypt.
 
-1. First of all you have to install Docker an Docker-Compose. To do this have a look at point 1 and 2 our
+1. First you have to install Docker and Docker-Compose. To do this have a look at point 1 and 2 our
    [guide](vocascan-server/docker/docker) in the general vocascan-server installation section.
 
-2. After that install `apache2-utils` to create a secure password hash for the Traefik monitoring website with
+2. After that create a secure password hash for the Traefik monitoring website with
    `htpasswd`
 
-   ```bash
-   sudo apt-get install apache2-utils
+   ```
+   docker run --entrypoint htpasswd httpd:2 -Bbn admin your_password
    ```
 
-   Create password hash
-
-   ```bash
-   htpasswd -nb admin my_secure_password
-   ```
-
-   The output will look something like this. Store it for the configuration later
+   The output will look something like this. Store it for the later configuration 
 
    ```
    admin:$apr1$ppHrFJc4$3/iv8jBNSDXlxiAuP1GDH1
@@ -33,7 +27,7 @@ Let's Encrypt.
 
 4. Copy Traefik and Docker configs from cloned repo
 
-   copy Traefik folder in you current directory
+   copy Traefik folder in your current directory
 
    ```bash
    cp -R vocascan-server/docker/traefik traefik
@@ -57,7 +51,7 @@ Let's Encrypt.
    chmod 600 acme.json
    ```
 
-6. Open `vocascan.config.js` to configure you server
+6. Open `vocascan.config.js` to configure your server
 
    ```bash
    nano vocascan.config.js
@@ -71,7 +65,7 @@ Let's Encrypt.
    nano traefik.toml
    ```
 
-   and update the email prop to you email
+   and update the email prop to your email
 
    ```toml
                         ...
@@ -96,7 +90,7 @@ Let's Encrypt.
    4    ]
    ```
 
-   - Update your your domain (line 7)
+   - Update your domain (line 7)
 
    ````toml
    6    [http.routers.api]

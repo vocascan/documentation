@@ -60,7 +60,7 @@
    mkdir vocascan-server && cd vocascan-server
    ```
 
-   Download th config file template `vocascan.config.example.js`
+   Download the config file template `vocascan.config.example.js`
 
    ```bash
    curl "https://raw.githubusercontent.com/vocascan/vocascan-server/main/vocascan.config.example.js" -o vocascan.config.js
