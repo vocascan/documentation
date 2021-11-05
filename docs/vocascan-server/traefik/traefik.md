@@ -67,7 +67,7 @@ Let's Encrypt.
 
    and update the email prop to your email
 
-   ```toml
+   ```
                         ...
    14    [certificatesResolvers.lets-encrypt.acme]
    15       email = "your@mail.com"
@@ -83,21 +83,22 @@ Let's Encrypt.
 
    - Add the secret key (line 3), you created in the beginning (step 2)
 
-   ```toml
+   ```
    1    [http.middlewares.simpleAuth.basicAuth]
    2       users = [
    3          "admin:secret_key"
    4    ]
+                        ...
    ```
 
    - Update your domain (line 7)
 
-   ````toml
+   ```
+                        ...
    6    [http.routers.api]
    7       rule = "Host(`monitor.your_domain.com`)"
+                        ...
    ```
-
-   ````
 
 9. Open `docker-compose.yml`
 
@@ -107,11 +108,12 @@ Let's Encrypt.
 
    update your docker variables and replace your domain
 
-   ```yml
-                                    ...    
-      18   - "traefik.frontend.rule=Host:monitor.your_domain.com" 
-                                    ... 
-      33   - "traefik.http.routers.vocascan.rule=Host(`web.your_domain.com`)"
+   ```
+                                 ...    
+   18   - "traefik.frontend.rule=Host:monitor.your_domain.com" 
+                                 ... 
+   33   - "traefik.http.routers.vocascan.rule=Host(`web.your_domain.com`)"
+                                 ...
    ```
 
 10. Start you docker containers
@@ -127,7 +129,6 @@ The last thing you need to do is finish setting up your new Vocascan server. For
 
 11. Create a session in your running vocascan-server docker container   
 
-   Create a session for the vocascan Docker container
    ```bash
    docker-compose exec vocascan ash
    ```

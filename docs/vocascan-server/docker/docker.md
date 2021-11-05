@@ -87,7 +87,6 @@ There are ready-to-use images for docker.
 
 5. Create a session in your running vocascan-server docker container  
 
-   Create a session for the vocascan Docker container
    ```bash
    docker-compose exec vocascan ash
    ```
