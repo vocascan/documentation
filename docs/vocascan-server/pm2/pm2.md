@@ -94,3 +94,14 @@
    ```bash
    pm2 save
    ```
+
+8. Create an admin user
+
+   ```bash
+   vocascan-server admin user create -u admin -p my_admin_password -e admin -r admin
+   ```
+
+   ?> Info: To see every registered user use this [command]("vocascan-server/cli#list")
+
+   Your setup is now ready and you can start using your server. Please remember that the admin user you just created should not be used as a regular account. Please create another one for your daily use.
+
