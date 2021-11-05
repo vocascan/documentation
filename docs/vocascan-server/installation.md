@@ -2,7 +2,7 @@
 
 This guide will get you through the installation of your own vocascan-server installation.
 
-There are two ways to set up the a server.
+Currently, we offer three ready-made solutions for setting up your Vocascan server
 
 1. [PM2](#_1-pm2)
 2. [Docker](#_2-docker)

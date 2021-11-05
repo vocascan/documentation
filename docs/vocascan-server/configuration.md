@@ -36,7 +36,7 @@ There are 2 ways to configure a vocascan-server.
 
 | Name    | Default | Description                                                                                             |
 | ------- | ------- | ------------------------------------------------------------------------------------------------------- |
-| `debug` | `false` | Enables development mode, so stack traces are also send to the client. Never enable this in production. |
+| `debug` | `false` | Enables development mode, so stack traces are also sent to the client. Never enable this in production. |
 
 ## Server (`server`)
 
@@ -52,8 +52,8 @@ There are 2 ways to configure a vocascan-server.
 | Name             | Default | Description                                                                                                   |
 | ---------------- | ------- | ------------------------------------------------------------------------------------------------------------- |
 | `connection_url` |         | To connect to the database, you can either use a connection url, or set the other config options individually |
-| `dialect`        |         | DB dialect. Currently only `mysql`, `mariadb`, `postgres` and `sqlite` are supported.                         |
-| `storage`        |         | SQL File. Only valid if dialect is `sqlite`.                                                                  |
+| `dialect`        |         | DB dialect. Currently, only `mysql`, `mariadb`, `postgres` and `sqlite` are supported.                         |
+| `storage`        |         | SQL file. Only valid if dialect is `sqlite`.                                                                  |
 | `host`           |         | Database host                                                                                                 |
 | `port`           |         | Database port                                                                                                 |
 | `username`       |         | Database username                                                                                             |
@@ -62,7 +62,7 @@ There are 2 ways to configure a vocascan-server.
 
 ## Log (`log`)
 
-For more infos about the logger section see [logging guide](vocascan-server/logging).
+For more informations about the logger section see [logging guide](vocascan-server/logging).
 
 | Name      | Default | Description                                                                            |
 | --------- | ------- | -------------------------------------------------------------------------------------- |
@@ -100,7 +100,7 @@ For more infos about the logger section see [logging guide](vocascan-server/logg
 | `filename`     |         | The filename of the log file to write output to.                                                                                       |
 | `max_size`     |         | Max size in bytes of the log file, if the size is exceeded then a new file is created, a counter will become a suffix of the log file. |
 | `max_files`    |         | Limit the number of files created when the size of the log file is exceeded.                                                           |
-| `archive_logs` |         | If true, all log files but the current one will be packed into a zip archive.                                                          |
+| `archive_logs` |         | If true, all log files, but the current one will be packed into a zip archive.                                                          |
 
 ## API (`api`)
 

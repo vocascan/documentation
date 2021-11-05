@@ -53,7 +53,7 @@ VOCASCAN__MYCUSTOMLOGGER1__HANDLE_EXCEPTIONS=false
 
 It is also possible to define custom formats for each logging group (`default`, `sql`, `router`). The formats are
 defined with a template syntax. The javascript template syntax starts with two round brackets `{{` and ends with two
-`}}`. Between the brackets you can use any valid javascript. The context variables are available within the global
+`}}`. Between the brackets, you can use any valid javascript. The context variables are available within the global
 scope.
 
 ### Example
@@ -103,7 +103,7 @@ groups and a specific context for each logging group.
   - `url` - The URL of the request.
   - `method` - The http method used for the request.
   - `responseTime(digits=3)` - The time after a request comes in and the response headers are written.
-  - `totalTime(digits=3)` - The total time after a request comes in and the response is send.
+  - `totalTime(digits=3)` - The total time after a request comes in and the response is sent.
   - `date(format)` - Current date. `format` could be `clf`, `iso` or `web`.
   - `status` - The status code of the response.
   - `colorizedStatus` - The colorized status code of the response.
