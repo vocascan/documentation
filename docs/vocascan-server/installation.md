@@ -5,6 +5,15 @@ This guide will get you through the installation of your own vocascan-server ins
 Currently we offer three ready-made solutions for setting up your Vocascan server
 
 1. [PM2](vocascan-server/pm2/pm2)
+
+   This tutorial shows you how to set up a Vocascan server using PM2, a production process manager for Node.js applications that has a built-in load balancer.
+
+   | Pros ✔️                                             | Cons ❌                                |
+   | ----------------------------------------------------| -------------------------------------- |
+   | reloads without downtime                            | More suitable for the internal network |
+   | Helps with application logging, monitoring, logging | No SSL encryption                      |
+   |                                                     | No own domain                          |
+
 2. [Docker](vocascan-server/docker/docker)
 
    This tutorial shows you how to easily set up a Vocascan server with minimal effort, ideal for your own home network.
@@ -13,7 +22,7 @@ Currently we offer three ready-made solutions for setting up your Vocascan serve
    | ----------------------- | -------------------------------------- |
    | Easy to set up          | More suitable for the internal network |
    | You don't need a domain | No SSL encryption                      |
-   |                         | No own domain                          |
+   | Scalability             | No own domain                          |
 
 3. [Traefik](vocascan-server/traefik/traefik)
 
@@ -24,3 +33,4 @@ Currently we offer three ready-made solutions for setting up your Vocascan serve
    | ----------------------------------------- | ----------------- |
    | SSL encryption (more secure)              | more complex      |
    | Own domain to make server easier to reach | You need a domain |
+   | Scalability                               |                   |
