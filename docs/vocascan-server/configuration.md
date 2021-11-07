@@ -74,7 +74,8 @@ For more infos about the logger section see [logging guide](vocascan-server/logg
 
 | Name                 | Default   | Description                                                                                                                                                         |
 | -------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `mode`               | `console` | Define logging transport. Available transports are `console` and `file`                                                                                             |
+| `enable`             | `true`    | Enables/Disable the logger. Is useful to disable the by default enabled `console` logger.                                                                           |
+| `mode`               | `console` | Define logging transport. Available transports are `console` and `file`.                                                                                            |
 | `level`              | `info`    | Specifies from which log level the logging entries are to be logged with this logger. Available levels are `silly`, `debug`, `verbose`, `info`, `warn` and `error`. |
 | `colorize`           | `true`    | Colorize the logging output with ANSI escape sequences.                                                                                                             |
 | `enable_default_log` | `true`    | Enables default logging.                                                                                                                                            |
