@@ -2,7 +2,7 @@
 
 1. Install vocascan-server
 
-   see the vocascan-server [installation guide](vocascan-server/installation)
+   see the vocascan-server [installation guide](vocascan-server/installation/installation)
 
 2. Fork the [vocascan-desktop](https://github.com/vocascan/vocascan-desktop) repository
 

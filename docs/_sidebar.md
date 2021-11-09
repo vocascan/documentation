@@ -16,10 +16,10 @@
 - Vocascan-Server
 
   - [Intro](vocascan-server/intro.md)
-  - [Installation](vocascan-server/installation.md)
-    - [PM2](vocascan-server/pm2/pm2.md)
-    - [Docker](vocascan-server/docker/docker.md)
-    - [Traefik](vocascan-server/traefik/traefik.md)
+  - [Installation](vocascan-server/installation/installation.md)
+    - [PM2](vocascan-server/installation/pm2/pm2.md)
+    - [Docker](vocascan-server/installation/docker/docker.md)
+    - [Traefik](vocascan-server/installation/traefik/traefik.md)
   - [Configuration](vocascan-server/configuration.md)
   - [Logging](vocascan-server/logging.md)
   - [Contribute](vocascan-server/contribute.md)

@@ -3,17 +3,16 @@
 This guide will get you through the installation of your own vocascan-server paired with Traefik as a reverse proxy and
 Let's Encrypt.
 
-1. First you have to install Docker and Docker-Compose. To do this have a look at point 1 and 2 our
-   [guide](vocascan-server/docker/docker) in the general vocascan-server installation section.
+1. First you have to install Docker and Docker-Compose. To do this have a look at point 1 and 2 of our
+   [guide](vocascan-server/installation/docker/docker) in the general vocascan-server installation section.
 
-2. After that create a secure password hash for the Traefik monitoring website with
-   `htpasswd`
+2. After that create a secure password hash for the Traefik monitoring website with `htpasswd`
 
    ```
-   docker run --entrypoint htpasswd httpd:2 -Bbn admin your_password
+   docker run --rm --entrypoint htpasswd httpd:2 -Bbn admin your_password
    ```
 
-   The output will look something like this. Store it for the later configuration 
+   The output will look something like this. Store it for the later configuration
 
    ```
    admin:$apr1$ppHrFJc4$3/iv8jBNSDXlxiAuP1GDH1
@@ -67,7 +66,7 @@ Let's Encrypt.
 
    and update the email prop to your email
 
-   ```
+   ```toml
                         ...
    14    [certificatesResolvers.lets-encrypt.acme]
    15       email = "your@mail.com"
@@ -83,7 +82,7 @@ Let's Encrypt.
 
    - Add the secret key (line 3), you created in the beginning (step 2)
 
-   ```
+   ```toml
    1    [http.middlewares.simpleAuth.basicAuth]
    2       users = [
    3          "admin:secret_key"
@@ -93,7 +92,7 @@ Let's Encrypt.
 
    - Update your domain (line 7)
 
-   ```
+   ```toml
                         ...
    6    [http.routers.api]
    7       rule = "Host(`monitor.your_domain.com`)"
@@ -102,16 +101,18 @@ Let's Encrypt.
 
 9. Open `docker-compose.yml`
 
+   Remember to [configure](vocascan-server/configuration) the file after you needs:
+
    ```bash
    nano docker-compose.yml
    ```
 
-   update your docker variables and replace your domain
+   On top of that, replace this parts to your domain
 
-   ```
-                                 ...    
-   18   - "traefik.frontend.rule=Host:monitor.your_domain.com" 
-                                 ... 
+   ```toml
+                                 ...
+   18   - "traefik.frontend.rule=Host:monitor.your_domain.com"
+                                 ...
    33   - "traefik.http.routers.vocascan.rule=Host(`web.your_domain.com`)"
                                  ...
    ```
@@ -122,12 +123,12 @@ Let's Encrypt.
    docker-compose up -d
    ```
 
-Your server should now be accessible at `web.your_domain.com`. In addition, a monitoring tool is available at
-`monitor.your_domain.com`, which can be accessed with the login data you created at the beginning.
+   Your server should now be accessible at `web.your_domain.com`. In addition, a monitoring tool is available at
+   `monitor.your_domain.com`, which can be accessed with the login data you created at the beginning.
 
-The last thing you need to do is finish setting up your new Vocascan server. For this you need to create an admin user.
+   The last thing you need to do is finish setting up your new Vocascan server. For this you need to create an admin user.
 
-11. Create a session in your running vocascan-server docker container   
+11. Create a session in your running vocascan-server docker container
 
    ```bash
    docker-compose exec vocascan ash
@@ -138,12 +139,14 @@ The last thing you need to do is finish setting up your new Vocascan server. For
    ```
    /app # node vocascan-server admin user create -u admin -p my_admin_password -e admin -r admin
    ```
-   
+
    leave the session with
+
    ```bash
    exit
    ```
 
-   ?> Info: To see every registered user use this [command]("vocascan-server/cli#list")
+?> Info: To see every registered user use this [command]("vocascan-server/cli#list")
 
-   Your setup is now ready and you can start using your server. Please remember that the admin user you just created should not be used as a regular account. Please create another one for your daily use.
+!> Please remember that the admin user you just created should not be used as a regular account. Please create another
+one for your daily use. For this you can either use the registration function in the desktop app or with the cli.

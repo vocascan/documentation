@@ -6,22 +6,24 @@
    sudo apt install nodejs npm git
    ```
 
-   Check if nodejs version is at least v14.x.x
-   
+   Check if nodejs version is at least v12.x.x
+
    ```bash
    node -v
    ```
 
-   if not, you can install it via the [NodeSource PPA]("https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04")
-   
+   if not, you can install it via the
+   [NodeSource PPA](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04)
+
    Retrieve installation script
 
    ```bash
    cd ~
-   curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+   curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
    ```
 
    execute the script
+
    ```bash
    sudo bash nodesource_setup.sh
    ```
@@ -55,7 +57,7 @@
 4. Configure your server.
 
    create a folder to hold your config file
-   
+
    ```bash
    mkdir vocascan-server && cd vocascan-server
    ```
@@ -77,7 +79,7 @@
 5. Start vocascan-server
 
    ```bash
-   pm2 start vocascan-server -- web "vocascan-server"
+   pm2 start vocascan-server -- web
    ```
 
 6. Enable pm2 startup on reboot
@@ -103,5 +105,6 @@
 
    ?> Info: To see every registered user use this [command]("vocascan-server/cli#list")
 
-   Your setup is now ready and you can start using your server. Please remember that the admin user you just created should not be used as a regular account. Please create another one for your daily use.
-
+   !> Please remember that the admin user you just created should not be used as a regular account. Please create
+   another one for your daily use. For this you can either use the registration function in the desktop app or with the
+   cli.
