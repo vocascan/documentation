@@ -119,34 +119,36 @@ Let's Encrypt.
 
 10. Start you docker containers
 
-   ```bash
-   docker-compose up -d
-   ```
+    ```bash
+    docker-compose up -d
+    ```
 
-   Your server should now be accessible at `web.your_domain.com`. In addition, a monitoring tool is available at
-   `monitor.your_domain.com`, which can be accessed with the login data you created at the beginning.
+    Your server should now be accessible at `web.your_domain.com`. In addition, a monitoring tool is available at
+    `monitor.your_domain.com`, which can be accessed with the login data you created at the beginning.
 
-   The last thing you need to do is finish setting up your new Vocascan server. For this you need to create an admin user.
+    The last thing you need to do is finish setting up your new Vocascan server. For this you need to create an admin
+    user.
 
 11. Create a session in your running vocascan-server docker container
 
-   ```bash
-   docker-compose exec vocascan ash
-   ```
+    ```bash
+    docker-compose exec vocascan ash
+    ```
 
 12. Create an admin user
 
-   ```
-   /app # node vocascan-server admin user create -u admin -p my_admin_password -e admin -r admin
-   ```
+    ```
+    /app # node vocascan-server admin user create -u admin -p my_admin_password -e admin -r admin
+    ```
 
-   leave the session with
+    leave the session with
 
-   ```bash
-   exit
-   ```
+    ```bash
+    exit
+    ```
 
-?> Info: To see every registered user use this [command]("vocascan-server/cli#list")
+    ?> Info: To see every registered user use this [command]("vocascan-server/cli#list")
 
-!> Please remember that the admin user you just created should not be used as a regular account. Please create another
-one for your daily use. For this you can either use the registration function in the desktop app or with the cli.
+    !> Please remember that the admin user you just created should not be used as a regular account. Please create
+    another one for your daily use. For this you can either use the registration function in the desktop app or with the
+    cli.
