@@ -16,13 +16,14 @@ For all available options see the log section in the [configuration sheet](vocas
 ```js
 module.exports = {
   log: {
-      myCustomLogger1: {
+    myCustomLogger1: {
       mode: "console", // shouldn't be necessary, because console is the default
       stderr_levels: ["error", "warn"],
       colorize: true,
       handle_exceptions: false,
     },
     myCustomLogger2: {
+      enable: false,
       mode: "file",
       filename: "./logs/vocascan.log",
       enable_sql_log: true,
@@ -32,11 +33,12 @@ module.exports = {
       archive_logs: true,
     },
     file: {
+      enable: true,
       level: "debug",
       enable_router_log: true,
       stderr_levels: ['error'],
     },
-}
+  }
 ```
 
 This configuration can also be archived by only using environment variables. In the following an example for
@@ -47,6 +49,15 @@ VOCASCAN__MYCUSTOMLOGGER1__MODE=console
 VOCASCAN__MYCUSTOMLOGGER1__STDERR_LEVELS=error,warn
 VOCASCAN__MYCUSTOMLOGGER1__COLORIZE=true
 VOCASCAN__MYCUSTOMLOGGER1__HANDLE_EXCEPTIONS=false
+```
+
+## Default logger
+
+By default the `console` logger with colorization is enabled. If you don't want to log to the console, you can disable
+it via the `log.console.enable` option.
+
+```env
+VOCASCAN__LOG__CONSOLE__ENABLE=false
 ```
 
 ## Custom format
