@@ -19,7 +19,7 @@
 
    ```bash
    cd ~
-   curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
+   curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
    ```
 
    execute the script
@@ -108,3 +108,5 @@
    !> Please remember that the admin user you just created should not be used as a regular account. Please create
    another one for your daily use. For this you can either use the registration function in the desktop app or with the
    cli.
+
+Your setup is now ready and you can start using your server.
