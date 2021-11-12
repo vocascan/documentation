@@ -17,9 +17,9 @@
 
   - [Intro](vocascan-server/intro.md)
   - [Installation](vocascan-server/installation/installation.md)
-    - [PM2](vocascan-server/installation/pm2/pm2.md)
-    - [Docker](vocascan-server/installation/docker/docker.md)
-    - [Traefik](vocascan-server/installation/traefik/traefik.md)
+    - [PM2](vocascan-server/installation/pm2.md)
+    - [Docker](vocascan-server/installation/docker.md)
+    - [Traefik](vocascan-server/installation/traefik.md)
   - [Configuration](vocascan-server/configuration.md)
   - [Logging](vocascan-server/logging.md)
   - [Command Line Interface](vocascan-server/cli.md)
