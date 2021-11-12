@@ -1,112 +1,112 @@
-## 1. PM2
+# PM2
 
-1. Install node, npm and git
+## 1. Install node, npm and git
 
-   ```bash
-   sudo apt install nodejs npm git
-   ```
+```bash
+sudo apt install nodejs npm git
+```
 
-   Check if nodejs version is at least v12.x.x
+Check if nodejs version is at least v12.x.x
 
-   ```bash
-   node -v
-   ```
+```bash
+node -v
+```
 
-   if not, you can install it via the
-   [NodeSource PPA](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04)
+if not, you can install it via the
+[NodeSource PPA](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04)
 
-   Retrieve installation script
+Retrieve installation script
 
-   ```bash
-   cd ~
-   curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
-   ```
+```bash
+cd ~
+curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+```
 
-   execute the script
+execute the script
 
-   ```bash
-   sudo bash nodesource_setup.sh
-   ```
+```bash
+sudo bash nodesource_setup.sh
+```
 
-   your local package cache will be updated and you can install nodejs
+your local package cache will be updated and you can install nodejs
 
-   ```bash
-   sudo apt install nodejs
-   ```
+```bash
+sudo apt install nodejs
+```
 
-   check the version again
+check the version again
 
-   ```bash
-   node -v
-   ```
+```bash
+node -v
+```
 
-2. Install pm2
+## 2. Install pm2
 
-   ```bash
-   npm i -g pm2
-   ```
+```bash
+npm i -g pm2
+```
 
-3. install the vocascan server npm package globally
+## 3. install packages
 
-   ```bash
-   sudo npm i -g @vocascan/server
-   ```
+install the vocascan server npm package globally
 
-   ?> If you want to have Sqlite support, add the `--sqlite` flag
+```bash
+sudo npm i -g @vocascan/server
+```
 
-4. Configure your server.
+?> If you want to have Sqlite support, add the `--sqlite` flag
 
-   create a folder to hold your config file
+## 4. Configure your server.
 
-   ```bash
-   mkdir vocascan-server && cd vocascan-server
-   ```
+create a folder to hold your config file
 
-   Download the config file template `vocascan.config.example.js`
+```bash
+mkdir vocascan-server && cd vocascan-server
+```
 
-   ```bash
-   curl "https://raw.githubusercontent.com/vocascan/vocascan-server/main/vocascan.config.example.js" -o vocascan.config.js
-   ```
+Download the config file template `vocascan.config.example.js`
 
-   Open config file and fill in your details
+```bash
+curl "https://raw.githubusercontent.com/vocascan/vocascan-server/main/vocascan.config.example.js" -o vocascan.config.js
+```
 
-   ```bash
-   nano vocascan.config.js
-   ```
+Open config file and fill in your details
 
-   For more details about the configuration see [configuration](vocascan-server/configuration) page.
+```bash
+nano vocascan.config.js
+```
 
-5. Start vocascan-server
+For more details about the configuration see [configuration](vocascan-server/configuration) page.
 
-   ```bash
-   pm2 start vocascan-server -- web
-   ```
+## 5. Start vocascan-server
 
-6. Enable pm2 startup on reboot
+```bash
+pm2 start vocascan-server -- web
+```
 
-   ```bash
-   pm2 startup
-   ```
+## 6. Enable pm2 startup on reboot
 
-   For deeper options on pm2, check out their
-   [documentation](https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/).
+```bash
+pm2 startup
+```
 
-7. Save process list
+For deeper options on pm2, check out their [documentation](https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/).
 
-   ```bash
-   pm2 save
-   ```
+## 7. Save process list
 
-8. Create an admin user
+```bash
+pm2 save
+```
 
-   ```bash
-   vocascan-server admin user create -u admin -p my_admin_password -e admin -r admin
-   ```
+## 8. Create an admin user
 
-   ?> Info: To see every registered user use this [command]("vocascan-server/cli#list")
+```bash
+vocascan-server admin user create -u admin -p my_admin_password -e admin -r admin
+```
 
-   !> Please remember that the admin user you just created should not be used as a regular account. Please create
-   another one for your daily use. For this you can either use the registration function in the desktop app or with the
-   cli.
+?> Info: To see every registered user use this [command]("vocascan-server/cli#list")
+
+!> Please remember that the admin user you just created should not be used as a regular account. Please create another
+one for your daily use. For this you can either use the registration function in the desktop app or with the cli.
 
 Your setup is now ready and you can start using your server.
