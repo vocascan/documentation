@@ -70,7 +70,7 @@ Download the config file template `vocascan.config.example.js`
 curl "https://raw.githubusercontent.com/vocascan/vocascan-server/main/vocascan.config.example.js" -o vocascan.config.js
 ```
 
-Open config file and fill in your details
+Open config file and configure it for your needs
 
 ```bash
 nano vocascan.config.js

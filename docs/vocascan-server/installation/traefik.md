@@ -62,7 +62,7 @@ chmod 600 acme.json
 
 ## 6. Configure Vocascan-Server
 
-Open `vocascan.config.js` to configure your server
+Open `vocascan.config.js` to configure your server after your needs
 
 ```bash
 nano vocascan.config.js

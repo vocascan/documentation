@@ -58,7 +58,7 @@ download docker-compose file
 curl "https://raw.githubusercontent.com/vocascan/vocascan-server/main/docker/default/docker-compose.yml" -o docker-compose.yml
 ```
 
-Remember to [configure](vocascan-server/configuration) the files after your needs:
+Remember to [configure](vocascan-server/configuration) the files after your needs with:
 
 ```bash
 nano docker-compose.yml

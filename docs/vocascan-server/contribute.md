@@ -44,6 +44,8 @@ Fill out the config file. For a complete guide for each option see [configuratio
 npm run dev
 ```
 
+?> To use the [vocascan cli](vocascan-server/cli) run the command `npm run link`
+
 ## 8. Add your awesome feature
 
 ## 9. Commit and push changes
