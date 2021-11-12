@@ -68,7 +68,8 @@ Open `vocascan.config.js` to configure your server after your needs
 nano vocascan.config.js
 ```
 
-For more details about the configuration see [configuration](vocascan-server/configuration) page.
+Fill out the config file.`server.jwt_secret` and `database.*` needs to be changed. For more details about the
+configuration see [configuration](vocascan-server/configuration) page.
 
 ## 7. Configure traefik
 
@@ -168,7 +169,7 @@ leave the session with
 exit
 ```
 
-?> Info: To see every registered user use this [command]("vocascan-server/cli#list")
+?> Info: To see every registered user use this [command](vocascan-server/cli#list)
 
 !> Please remember that the admin user you just created should not be used as a regular account. Please create another
 one for your daily use. For this you can either use the registration function in the desktop app or with the cli.

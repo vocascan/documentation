@@ -46,7 +46,7 @@ In the server repository there are sample `docker-compose.yml` configuration fil
 3.1 You can either use the config file directly:
 
 download vocascan.config.js (to use a fully extended config, have a look at this
-[config file]("https://raw.githubusercontent.com/vocascan/vocascan-server/main/vocascan.config.example.js"))
+[config file](https://raw.githubusercontent.com/vocascan/vocascan-server/main/vocascan.config.example.js))
 
 ```bash
 curl "https://raw.githubusercontent.com/vocascan/vocascan-server/main/docker/default/vocascan.config.js" -o vocascan.config.js
@@ -58,11 +58,16 @@ download docker-compose file
 curl "https://raw.githubusercontent.com/vocascan/vocascan-server/main/docker/default/docker-compose.yml" -o docker-compose.yml
 ```
 
-Remember to [configure](vocascan-server/configuration) the files after your needs with:
+Remember to [configure](vocascan-server/configuration) the files after you needs.
+
+`VOCASCAN_CONFIG` has to be set to your config file path
 
 ```bash
 nano docker-compose.yml
 ```
+
+`server.jwt_secret` and `database.*` needs to be changed. For more details about the configuration see
+[configuration](vocascan-server/configuration) page.
 
 ```bash
 nano vocascan.config.js
@@ -78,7 +83,9 @@ download docker-compose file
 curl "https://raw.githubusercontent.com/vocascan/vocascan-server/main/docker/use-env/docker-compose.yml" -o docker-compose.yml
 ```
 
-Remember to [configure](vocascan-server/configuration) the file after you needs:
+Remember to [configure](vocascan-server/configuration) the file after you needs. `VOCASCAN__SERVER__JWT_SECRET` and
+`VOCASCAN__DATABASE__*` needs to be changed. For more details about the configuration see
+[configuration](vocascan-server/configuration) page.
 
 ```bash
 nano docker-compose.yml
@@ -112,7 +119,7 @@ leave the session with
 exit
 ```
 
-?> Info: To see every registered user use this [command]("vocascan-server/cli#list")
+?> Info: To see every registered user use this [command](vocascan-server/cli#list)
 
 !> Please remember that the admin user you just created should not be used as a regular account. Please create another
 one for your daily use. For this you can either use the registration function in the desktop app or with the cli.
