@@ -1,64 +1,68 @@
 # How to contribute
 
-1. Fork the [vocascan-server](https://github.com/vocascan/vocascan-server) repository
+## 1. Forking
 
-   ![how to fork](../_media/images/vocascan-server-fork.png)
+Fork the [vocascan-server](https://github.com/vocascan/vocascan-server) repository
 
-2. Clone your fork
+![how to fork](../_media/images/vocascan-server-fork.png)
 
-   ```bash
-   git clone https://github.com/<username>/vocasan-server.git
-   ```
+## 2. Clone your fork
 
-3. Checkout experimental
+```bash
+git clone https://github.com/<username>/vocasan-server.git
+```
 
-   ```bash
-   git checkout experimental
-   ```
+## 3. Checkout experimental
 
-4. Create your own branch
+```bash
+git checkout experimental
+```
 
-   ```bash
-   git checkout -b my-awesome-feature
-   ```
+## 4. Create your own branch
 
-5. Install dependencies
+```bash
+git checkout -b my-awesome-feature
+```
 
-   ```bash
-   npm install --sqlite
-   ```
+## 5. Install dependencies
 
-6. Add config
+```bash
+npm install --sqlite
+```
 
-   Copy the env config file template to configure your server.
+## 6. Add config
 
-   ```bash
-   cp vocascan.config.example.js vocascan.config.js
-   ```
+Copy the env config file template to configure your server.
 
-   Fill out the config file. For a complete guide for each option see [configuration](vocascan-server/configuration)
+```bash
+cp vocascan.config.example.js vocascan.config.js
+```
 
-7. Run in dev mode
+Fill out the config file. `server.jwt_secret` and `database.*` needs to be changed. For a complete guide for each option
+see [configuration](vocascan-server/configuration).
 
-   ```bash
-   npm run dev
-   ```
+## 7. Run in dev mode
 
-8. Add your awesome feature
+```bash
+npm run dev
+```
 
-9. Commit and push changes
+?> To use the [vocascan cli](vocascan-server/cli) run the command `npm link`
 
-   ```bash
-   git add .
-   git commit -m "added my awesome feature"
-   git push
-   ```
+## 8. Add your awesome feature
 
-10. Create an pull request
+## 9. Commit and push changes
 
-    open <https://github.com/vocascan/vocascan-server/compare/experimental...[username>]:my-awesome-feature and press
-    `Create pull request`, fill out the template, make sure the `Allow edits and access to secrets by maintainers`
-    checkbox is checked and press again `Create pull request`. Now you're ready to wait for feedback from the
-    maintainers.
+```bash
+git add .
+git commit -m "added my awesome feature"
+git push
+```
 
-    ![how to open a pull request](../_media/images/vocascan-desktop-pull-request.png)
+## 10. Create an pull request
+
+open `https://github.com/vocascan/vocascan-server/compare/experimental...[username]:my-awesome-feature` and press
+`Create pull request`, fill out the template, make sure the `Allow edits and access to secrets by maintainers` checkbox
+is checked and press again `Create pull request`. Now you're ready to wait for feedback from the maintainers.
+
+![how to open a pull request](../_media/images/vocascan-desktop-pull-request.png)
