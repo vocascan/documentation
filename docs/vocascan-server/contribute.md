@@ -2,7 +2,7 @@
 
 ## 1. Forking
 
-Fork the[vocascan-server](https://github.com/vocascan/vocascan-server) repository
+Fork the [vocascan-server](https://github.com/vocascan/vocascan-server) repository
 
 ![how to fork](../_media/images/vocascan-server-fork.png)
 
@@ -38,8 +38,8 @@ Copy the env config file template to configure your server.
 cp vocascan.config.example.js vocascan.config.js
 ```
 
-Fill out the config file.`server.jwt_secret` and `database.*` needs to be changed. For a complete guide for each option
-see [configuration](vocascan-server/configuration)
+Fill out the config file. `server.jwt_secret` and `database.*` needs to be changed. For a complete guide for each option
+see [configuration](vocascan-server/configuration).
 
 ## 7. Run in dev mode
 

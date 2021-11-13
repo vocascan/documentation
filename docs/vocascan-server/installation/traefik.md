@@ -68,7 +68,7 @@ Open `vocascan.config.js` to configure your server after your needs
 nano vocascan.config.js
 ```
 
-Fill out the config file.`server.jwt_secret` and `database.*` needs to be changed. For more details about the
+Fill out the config file. `server.jwt_secret` and `database.*` needs to be changed. For more details about the
 configuration see [configuration](vocascan-server/configuration) page.
 
 ## 7. Configure traefik
