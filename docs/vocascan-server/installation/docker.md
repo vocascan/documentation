@@ -39,7 +39,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 ## 3. Configure vocascan-server
 
-In the server repository there are sample `docker-compose.yml` configuration files in separate
+In the server repository, there are sample `docker-compose.yml` configuration files in separate
 [folders](https://github.com/vocascan/vocascan-server/tree/main/docker). As described in the
 [configuration](vocascan-server/configuration) page:
 
@@ -97,7 +97,7 @@ nano docker-compose.yml
 docker-compose up -d
 ```
 
-The last thing you need to do is finish setting up your new Vocascan server. For this you need to create an admin user.
+The last thing you need to do is finish setting up your new Vocascan server. For this, you need to create an admin user.
 
 ## 5. Create session
 
@@ -119,9 +119,9 @@ leave the session with
 exit
 ```
 
-?> Info: To see every registered user use this [command](vocascan-server/cli#list)
+?> Info: To see every registered user, use this [command](vocascan-server/cli#list)
 
 !> Please remember that the admin user you just created should not be used as a regular account. Please create another
-one for your daily use. For this you can either use the registration function in the desktop app or with the cli.
+one for your daily use. For this, you can either use the registration function in the desktop app or with the cli.
 
 Your setup is now ready and you can start using your server.

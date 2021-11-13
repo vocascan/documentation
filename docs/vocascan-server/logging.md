@@ -11,7 +11,7 @@ As you might have already noticed, the logger called `file` has no `mode` proper
 same as the transport mode, it automatically sticks to the name. In summary, if a logger is called `file`, the mode is
 automatically set to `file`.
 
-For all available options see the log section in the [configuration sheet](vocascan-server/configuration?id=log-log).
+For all available options, see the log section in the [configuration sheet](vocascan-server/configuration?id=log-log).
 
 ```js
 module.exports = {
@@ -41,7 +41,7 @@ module.exports = {
   }
 ```
 
-This configuration can also be archived by only using environment variables. In the following an example for
+This configuration can also be archived by only using environment variables. In the following, an example for
 `myCustomLogger1`.
 
 ```bash
@@ -53,7 +53,7 @@ VOCASCAN__MYCUSTOMLOGGER1__HANDLE_EXCEPTIONS=false
 
 ## Default logger
 
-By default the `console` logger with colorization is enabled. If you don't want to log to the console, you can disable
+By default, the `console` logger with colorization is enabled. If you don't want to log to the console, you can disable
 it via the `log.console.enable` option.
 
 ```env
@@ -63,8 +63,8 @@ VOCASCAN__LOG__CONSOLE__ENABLE=false
 ## Custom format
 
 It is also possible to define custom formats for each logging group (`default`, `sql`, `router`). The formats are
-defined with a template syntax. The javascript template syntax starts with two round brackets `{{` and ends with two
-`}}`. Between the brackets, you can use any valid javascript. The context variables are available within the global
+defined with a template syntax. The JavaScript template syntax starts with two round brackets `{{` and ends with two
+`}}`. Between the brackets, you can use any valid JavaScript. The context variables are available within the global
 scope.
 
 ### Example
@@ -74,7 +74,7 @@ scope.
 - **Router Group** -
   `{{tokens.remoteAddr}} - "{{req.user ? req.user.username : "no user"}}" {{tokens.date("clf")}} "{{tokens.method}} {{tokens.url}}" {{tokens.colorizedStatus}} {{tokens.res("content-length")}} "{{tokens.userAgent}}" - {{tokens.responseTime(3)}}ms`
 
-As you might have already noticed, it's possible to use javascript operations inside the template. This can be used to
+As you might have already noticed, it's possible to use JavaScript operations inside the template. This can be used to
 check if a context variable is empty in order to display another string.
 
 Logging dates will be as simple as this.
@@ -104,11 +104,11 @@ groups and a specific context for each logging group.
 
 #### Router group
 
-- `req` access to the express request object (for more infos see
+- `req` access to the express request object (for more info see
   [express req object](https://expressjs.com/en/5x/api.html#req))
-- `res` access to the express response object (for more infos see
+- `res` access to the express response object (for more info see
   [express res object](https://expressjs.com/en/5x/api.html#res))
-- `tokens` morgan tokens. (for more infos see morgans documentation about the
+- `tokens` morgan tokens. (for more info see morgans documentation about the
   [tokens](https://www.npmjs.com/package/morgan#tokens)).
 
   - `url` - The URL of the request.

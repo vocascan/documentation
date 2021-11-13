@@ -2,9 +2,9 @@
 
 ## How to help with translations?
 
-1. Goto [localazy](https://localazy.com/)
+1. Goto [Localazy](https://localazy.com/)
 2. Create an account
-3. Goto the [vocascan](https://localazy.com/p/vocascan) project on localazy
+3. Goto the [vocascan](https://localazy.com/p/vocascan) project on Localazy
 4. Pick language
 5. Click Translate
 6. Start translating

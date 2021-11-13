@@ -44,7 +44,7 @@ There are 2 ways to configure a vocascan-server.
 | --------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `port`                | `5000`  | Defines the port on which the server is listening.                                                                                                                                        |
 | `jwt_secret`          |         | Secret is used to sign the payload of the jwt token, change this to a unique string. Everyone who knows that secret is able to act as other vocascan users.                               |
-| `salt_rounds`         | `10`    | The salt rounds define the coast efficiency factor to hash passwords with bcrypt. For more info see [bcrypts documentation](https://github.com/kelektiv/node.bcrypt.js#a-note-on-rounds). |
+| `salt_rounds`         | `10`    | The salt rounds define the coast efficiency factor to hash passwords with bcrypt. For more info, see [bcrypts documentation](https://github.com/kelektiv/node.bcrypt.js#a-note-on-rounds). |
 | `registration_locked` | `false` | Locks the server and only allows registrations with an invite code.                                                                                                                       |
 
 ## Database (`database`)
@@ -62,7 +62,7 @@ There are 2 ways to configure a vocascan-server.
 
 ## Log (`log`)
 
-For more informations about the logger section see [logging guide](vocascan-server/logging).
+For more information about the logger section see [logging guide](vocascan-server/logging).
 
 | Name      | Default | Description                                                                            |
 | --------- | ------- | -------------------------------------------------------------------------------------- |
@@ -74,7 +74,7 @@ For more informations about the logger section see [logging guide](vocascan-serv
 
 | Name                 | Default   | Description                                                                                                                                                         |
 | -------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `enable`             | `true`    | Enables/Disable the logger. Is useful to disable the by default enabled `console` logger.                                                                           |
+| `enable`             | `true`    | Enables/Disable the logger. It is useful to disable the by default enabled `console` logger.                                                                           |
 | `mode`               | `console` | Define logging transport. Available transports are `console` and `file`.                                                                                            |
 | `level`              | `info`    | Specifies from which log level the logging entries are to be logged with this logger. Available levels are `silly`, `debug`, `verbose`, `info`, `warn` and `error`. |
 | `colorize`           | `true`    | Colorize the logging output with ANSI escape sequences.                                                                                                             |

@@ -32,12 +32,12 @@ Creates a user in the configured database.
 - `-e`, `--email <email>` - email for the new user (required)
 - `-p`, `--password <password>` - password for the new user. If not set, a password of length `48` will be generated and
   printed.
-- `-r`, `--role <name>` - chose a role for the new user. By default there are the following roles `admin`, `user`.
+- `-r`, `--role <name>` - chose a role for the new user. By default, there are the following roles `admin`, `user`.
   (default: `user`)
 
 **Examples**
 
-- `vocascan-server admin user create -u admin -e admin -r admin` - will create a user with this specifications: name:
+- `vocascan-server admin user create -u admin -e admin -r admin` - will create a user with these specifications: name:
   `admin`, email: `admin`, role: `admin`, password: random.
 - `vocascan-server admin user create -u hans -e hans@gmail.com -r user -p abcdefg` - will create a user with this
   specifications: name: `hans`, email `hans@gmail.com`, role `user`, password `abcdefg`.

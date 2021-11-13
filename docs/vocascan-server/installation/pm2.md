@@ -6,7 +6,7 @@
 sudo apt install nodejs npm git
 ```
 
-Check if nodejs version is at least v12.x.x
+Check if NodeJS version is at least v12.x.x
 
 ```bash
 node -v
@@ -28,7 +28,7 @@ execute the script
 sudo bash nodesource_setup.sh
 ```
 
-your local package cache will be updated and you can install nodejs
+your local package cache will be updated and you can install NodeJS
 
 ```bash
 sudo apt install nodejs
@@ -46,19 +46,19 @@ node -v
 npm i -g pm2
 ```
 
-## 3. install packages
+## 3. Install packages
 
-install the vocascan server npm package globally
+Install the vocascan server npm package globally
 
 ```bash
 sudo npm i -g @vocascan/server
 ```
 
-?> If you want to have Sqlite support, add the `--sqlite` flag
+?> If you want to have SQlite support, add the `--sqlite` flag
 
 ## 4. Configure your server.
 
-create a folder to hold your config file
+Create a folder to hold your config file
 
 ```bash
 mkdir vocascan-server && cd vocascan-server
@@ -77,7 +77,7 @@ nano vocascan.config.js
 ```
 
 Fill out the config file. `server.jwt_secret` and `database.*` needs to be changed. For more details about the
-configuration see [configuration](vocascan-server/configuration) page.
+configuration, see [configuration](vocascan-server/configuration) page.
 
 ## 5. Start vocascan-server
 
@@ -105,9 +105,9 @@ pm2 save
 vocascan-server admin user create -u admin -p my_admin_password -e admin -r admin
 ```
 
-?> Info: To see every registered user use this [command](vocascan-server/cli#list)
+?> Info: To see every registered user, use this [command](vocascan-server/cli#list)
 
 !> Please remember that the admin user you just created should not be used as a regular account. Please create another
-one for your daily use. For this you can either use the registration function in the desktop app or with the cli.
+one for your daily use. For this, you can either use the registration function in the desktop app or with the cli.
 
 Your setup is now ready and you can start using your server.

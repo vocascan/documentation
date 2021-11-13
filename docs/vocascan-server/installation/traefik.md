@@ -5,12 +5,12 @@ Let's Encrypt.
 
 ## 1. Install docker
 
-First you have to install Docker and Docker-Compose. To do this have a look at point 1 and 2 of our
+First, you have to install Docker and Docker-Compose. To do this, have a look at point 1 and 2 of our
 [guide](vocascan-server/installation/docker) in the general vocascan-server installation section.
 
 ## 2. Create password
 
-After that create a secure password hash for the Traefik monitoring website with `htpasswd`
+After that, create a secure password hash for the Traefik monitoring website with `htpasswd`
 
 ```
 docker run --rm --entrypoint htpasswd httpd:2 -Bbn admin your_password
@@ -54,7 +54,7 @@ Create `acme.json` to store certificate information
 touch acme.json
 ```
 
-- make file only accessable by root
+- make file only accessible by root
 
 ```bash
 chmod 600 acme.json
@@ -69,7 +69,7 @@ nano vocascan.config.js
 ```
 
 Fill out the config file. `server.jwt_secret` and `database.*` needs to be changed. For more details about the
-configuration see [configuration](vocascan-server/configuration) page.
+configuration, see [configuration](vocascan-server/configuration) page.
 
 ## 7. Configure traefik
 
@@ -120,7 +120,7 @@ nano traefik_dynamic.toml
 
 Open `docker-compose.yml`
 
-Remember to [configure](vocascan-server/configuration) the file after you needs:
+Remember to [configure](vocascan-server/configuration) the file after your needs:
 
 ```bash
 nano docker-compose.yml
@@ -147,7 +147,7 @@ docker-compose up -d
 Your server should now be accessible at `web.your_domain.com`. In addition, a monitoring tool is available at
 `monitor.your_domain.com`, which can be accessed with the login data you created at the beginning.
 
-The last thing you need to do is finish setting up your new Vocascan server. For this you need to create an admin user.
+The last thing you need to do is finish setting up your new Vocascan server. For this, you need to create an admin user.
 
 ## 11. Create session
 
@@ -169,9 +169,9 @@ leave the session with
 exit
 ```
 
-?> Info: To see every registered user use this [command](vocascan-server/cli#list)
+?> Info: To see every registered user, use this [command](vocascan-server/cli#list)
 
 !> Please remember that the admin user you just created should not be used as a regular account. Please create another
-one for your daily use. For this you can either use the registration function in the desktop app or with the cli.
+one for your daily use. For this, you can either use the registration function in the desktop app or with the cli.
 
 Your setup is now ready and you can start using your server.
