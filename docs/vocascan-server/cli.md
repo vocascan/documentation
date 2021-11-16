@@ -39,7 +39,7 @@ Creates a user in the configured database.
 
 - `vocascan-server admin user create -u admin -e admin -r admin` - will create a user with these specifications: name:
   `admin`, email: `admin`, role: `admin`, password: random.
-- `vocascan-server admin user create -u hans -e hans@gmail.com -r user -p abcdefg` - will create a user with this
+- `vocascan-server admin user create -u hans -e hans@gmail.com -r user -p abcdefg` - will create a user with these
   specifications: name: `hans`, email `hans@gmail.com`, role `user`, password `abcdefg`.
 
 !> it does not have to be a real email, it's only a login name with which you can log in to vocascan-server to

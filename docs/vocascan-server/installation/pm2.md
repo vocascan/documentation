@@ -54,7 +54,7 @@ Install the vocascan server npm package globally
 sudo npm i -g @vocascan/server
 ```
 
-?> If you want to have SQlite support, add the `--sqlite` flag
+?> If you want to have SQLite support, add the `--sqlite` flag
 
 ## 4. Configure your server.
 
