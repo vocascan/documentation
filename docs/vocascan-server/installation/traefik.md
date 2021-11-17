@@ -71,6 +71,9 @@ nano vocascan.config.js
 Fill out the config file. `server.jwt_secret` and `database.*` needs to be changed. For more details about the
 configuration, see [configuration](vocascan-server/configuration) page.
 
+?> For all version see the [versions](vocascan-server/installation/docker#versions) page in the docker installation
+guide.
+
 ## 7. Configure traefik
 
 Open `traefik.toml`
@@ -146,6 +149,9 @@ docker-compose up -d
 
 Your server should now be accessible at `web.your_domain.com`. In addition, a monitoring tool is available at
 `monitor.your_domain.com`, which can be accessed with the login data you created at the beginning.
+
+?> If you want to **update** your server to a newer version, pull the latest images (`docker-compose pull`) and then
+restart the containers (`docker-compose up -d`).
 
 The last thing you need to do is finish setting up your new Vocascan server. For this, you need to create an admin user.
 

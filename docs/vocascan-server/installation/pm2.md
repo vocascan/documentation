@@ -46,9 +46,9 @@ node -v
 npm i -g pm2
 ```
 
-## 3. Install packages
+## 3. Install package
 
-Install the vocascan server npm package globally
+Install the vocascan server npm package globally.
 
 ```bash
 sudo npm i -g @vocascan/server
@@ -56,7 +56,28 @@ sudo npm i -g @vocascan/server
 
 ?> If you want to have SQLite support, add the `--sqlite` flag
 
-## 4. Configure your server.
+?> If you want to **update** your server to a newer version, just run this command again.
+
+### Versions
+
+There are different versions/tags published to the [npm registry](https://www.npmjs.com/). If you consider to install a
+different version than `latest`, use the following command. (Replace `<version>` with the version/tag you want to use)
+
+```bash
+sudo npm i -g @vocascan/server@<version>
+```
+
+- `latest` - The latest stable version points to the latest `X.Y.Z` release. It is recommended for production use.
+- `experimental` - The experimental version is partially stable and points to the latest `X.Y.Z-rc.A` released. If you
+  consider to use that version, note, that it can container some problems.
+- `X.Y.Z` - For each release, there is a specific version published.
+- `X.Y.Z-rc.A` - For each beta release, there is a specific tag published. It could contain some problems.
+
+!> Please notice, that **downgrading** is **not supported**. Make a backup before updating, in case there goes something
+wrong. If you update to an `experimental` version, please also notice that you have to stay with that version until the
+official version will be released.
+
+## 4. Configure your server
 
 Create a folder to hold your config file
 

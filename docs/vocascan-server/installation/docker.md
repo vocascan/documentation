@@ -91,11 +91,39 @@ Remember to [configure](vocascan-server/configuration) the file after you needs.
 nano docker-compose.yml
 ```
 
+### Versions
+
+There are different versions/tags published to the [docker registry](https://hub.docker.com/). If you consider to
+install a different version than `latest`, change it in the `docker-compose.yml` file. (Replace `<version>` with the
+version/tag you want to use)
+
+```yml
+image: vocascan/server:<version>
+```
+
+- `latest` - The latest stable version points to the latest `X.Y.Z` release. It is recommended for production use.
+- `experimental` - The experimental version is partially stable and points to the latest `X.Y.Z-rc.A` released. If you
+  consider to use that version, note, that it can container some problems.
+- `X` - Points to the latest release with the same major version.
+- `X.Y` - Points to the latest release with the same major and minor version.
+- `X.Y.Z` - Points to the latest release with the same major, minor and patch version.
+- `X.Y.Z-rc.A` - For each beta release, there is a specific tag published. It could contain some problems.
+- `[branch-name]` - Sometimes a branch needs some additional testing. If you want to test a specific branch and dont
+  want to build/checkout that locally, feel free contact a maintainer to get a pre-build docker image of that specific
+  branch.
+
+!> Please notice, that **downgrading** is **not supported**. Make a backup before updating, in case there goes something
+wrong. If you update to an `experimental` version, please also notice that you have to stay with that version until the
+official version will be released.
+
 ## 4. Start vocascan-server
 
 ```bash
 docker-compose up -d
 ```
+
+?> If you want to **update** your server to a newer version, pull the latest images (`docker-compose pull`) and then
+restart the containers (`docker-compose up -d`).
 
 The last thing you need to do is finish setting up your new Vocascan server. For this, you need to create an admin user.
 
