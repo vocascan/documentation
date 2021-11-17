@@ -36,24 +36,24 @@ There are 2 ways to configure a vocascan-server.
 
 | Name    | Default | Description                                                                                             |
 | ------- | ------- | ------------------------------------------------------------------------------------------------------- |
-| `debug` | `false` | Enables development mode, so stack traces are also send to the client. Never enable this in production. |
+| `debug` | `false` | Enables development mode, so stack traces are also sent to the client. Never enable this in production. |
 
 ## Server (`server`)
 
-| Name                  | Default | Description                                                                                                                                                                               |
-| --------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `port`                | `5000`  | Defines the port on which the server is listening.                                                                                                                                        |
-| `jwt_secret`          |         | Secret is used to sign the payload of the jwt token, change this to a unique string. Everyone who knows that secret is able to act as other vocascan users.                               |
-| `salt_rounds`         | `10`    | The salt rounds define the coast efficiency factor to hash passwords with bcrypt. For more info see [bcrypts documentation](https://github.com/kelektiv/node.bcrypt.js#a-note-on-rounds). |
-| `registration_locked` | `false` | Locks the server and only allows registrations with an invite code.                                                                                                                       |
+| Name                  | Default | Description                                                                                                                                                                                |
+| --------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `port`                | `5000`  | Defines the port on which the server is listening.                                                                                                                                         |
+| `jwt_secret`          |         | Secret is used to sign the payload of the jwt token, change this to a unique string. Everyone who knows that secret is able to act as other vocascan users.                                |
+| `salt_rounds`         | `10`    | The salt rounds define the coast efficiency factor to hash passwords with bcrypt. For more info, see [bcrypts documentation](https://github.com/kelektiv/node.bcrypt.js#a-note-on-rounds). |
+| `registration_locked` | `false` | Locks the server and only allows registrations with an invite code.                                                                                                                        |
 
 ## Database (`database`)
 
 | Name             | Default | Description                                                                                                   |
 | ---------------- | ------- | ------------------------------------------------------------------------------------------------------------- |
 | `connection_url` |         | To connect to the database, you can either use a connection url, or set the other config options individually |
-| `dialect`        |         | DB dialect. Currently only `mysql`, `mariadb`, `postgres` and `sqlite` are supported.                         |
-| `storage`        |         | SQL File. Only valid if dialect is `sqlite`.                                                                  |
+| `dialect`        |         | DB dialect. Currently, only `mysql`, `mariadb`, `postgres` and `sqlite` are supported.                        |
+| `storage`        |         | SQL file. Only valid if dialect is `sqlite`.                                                                  |
 | `host`           |         | Database host                                                                                                 |
 | `port`           |         | Database port                                                                                                 |
 | `username`       |         | Database username                                                                                             |
@@ -62,7 +62,7 @@ There are 2 ways to configure a vocascan-server.
 
 ## Log (`log`)
 
-For more infos about the logger section see [logging guide](vocascan-server/logging).
+For more information about the logger section see [logging guide](vocascan-server/logging).
 
 | Name      | Default | Description                                                                            |
 | --------- | ------- | -------------------------------------------------------------------------------------- |
@@ -74,7 +74,7 @@ For more infos about the logger section see [logging guide](vocascan-server/logg
 
 | Name                 | Default   | Description                                                                                                                                                         |
 | -------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `enable`             | `true`    | Enables/Disable the logger. Is useful to disable the by default enabled `console` logger.                                                                           |
+| `enable`             | `true`    | Enables/Disable the logger. It is useful to disable the by default enabled `console` logger.                                                                        |
 | `mode`               | `console` | Define logging transport. Available transports are `console` and `file`.                                                                                            |
 | `level`              | `info`    | Specifies from which log level the logging entries are to be logged with this logger. Available levels are `silly`, `debug`, `verbose`, `info`, `warn` and `error`. |
 | `colorize`           | `true`    | Colorize the logging output with ANSI escape sequences.                                                                                                             |
@@ -101,7 +101,7 @@ For more infos about the logger section see [logging guide](vocascan-server/logg
 | `filename`     |         | The filename of the log file to write output to.                                                                                       |
 | `max_size`     |         | Max size in bytes of the log file, if the size is exceeded then a new file is created, a counter will become a suffix of the log file. |
 | `max_files`    |         | Limit the number of files created when the size of the log file is exceeded.                                                           |
-| `archive_logs` |         | If true, all log files but the current one will be packed into a zip archive.                                                          |
+| `archive_logs` |         | If true, all log files, but the current one will be packed into a zip archive.                                                         |
 
 ## API (`api`)
 

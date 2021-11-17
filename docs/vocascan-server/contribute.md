@@ -59,10 +59,10 @@ git commit -m "added my awesome feature"
 git push
 ```
 
-## 10. Create an pull request
+## 10. Create a pull request
 
 open `https://github.com/vocascan/vocascan-server/compare/experimental...[username]:my-awesome-feature` and press
 `Create pull request`, fill out the template, make sure the `Allow edits and access to secrets by maintainers` checkbox
 is checked and press again `Create pull request`. Now you're ready to wait for feedback from the maintainers.
 
-![how to open a pull request](../_media/images/vocascan-desktop-pull-request.png)
+![How to open a pull request](../_media/images/vocascan-desktop-pull-request.png)

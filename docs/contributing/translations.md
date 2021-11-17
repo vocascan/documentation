@@ -2,9 +2,9 @@
 
 ## How to help with translations?
 
-1. Goto [localazy](https://localazy.com/)
+1. Goto [Localazy](https://localazy.com/)
 2. Create an account
-3. Goto the [vocascan](https://localazy.com/p/vocascan) project on localazy
+3. Goto the [vocascan](https://localazy.com/p/vocascan) project on Localazy
 4. Pick language
 5. Click Translate
 6. Start translating
@@ -18,7 +18,7 @@ Here is everything you need to know while translating.
   `you solved {{percentage}}% of the vocabulary correctly!` should have the placeholder `{{percentage}}`, the `%`- sign
   and the `!` at the end.
 
-- Address the user directly. (In German the "du" form)
+- Address the user directly. (In German, the "du" form)
 
   `You can create vocab cards while deciding which package and group they belong to.` uses the "you" - form. And in
   German the "du" - form.

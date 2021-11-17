@@ -2,7 +2,7 @@
 
 This guide will get you through the installation of your own vocascan-server installation.
 
-Currently we offer three ready-made solutions for setting up your Vocascan server
+Currently, we offer three ready-made solutions for setting up your Vocascan server
 
 ## 1.&nbsp;[PM2](vocascan-server/installation/pm2)
 
