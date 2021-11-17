@@ -69,7 +69,7 @@ sudo npm i -g @vocascan/server@<version>
 
 - `latest` - The latest stable version points to the latest `X.Y.Z` release. It is recommended for production use.
 - `experimental` - The experimental version is partially stable and points to the latest `X.Y.Z-rc.A` released. If you
-  consider to use that version, note, that it can container some problems.
+  consider using that version, note, that it can contain some problems.
 - `X.Y.Z` - For each release, there is a specific version published.
 - `X.Y.Z-rc.A` - For each beta release, there is a specific tag published. It could contain some problems.
 

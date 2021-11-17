@@ -71,8 +71,8 @@ nano vocascan.config.js
 Fill out the config file. `server.jwt_secret` and `database.*` needs to be changed. For more details about the
 configuration, see [configuration](vocascan-server/configuration) page.
 
-?> For all version see the [versions](vocascan-server/installation/docker#versions) page in the docker installation
-guide.
+?> For all available tags see the [versions section](vocascan-server/installation/docker#versions) in the docker
+installation guide.
 
 ## 7. Configure traefik
 

@@ -103,14 +103,14 @@ image: vocascan/server:<version>
 
 - `latest` - The latest stable version points to the latest `X.Y.Z` release. It is recommended for production use.
 - `experimental` - The experimental version is partially stable and points to the latest `X.Y.Z-rc.A` released. If you
-  consider to use that version, note, that it can container some problems.
+  consider using that version, note, that it can contain some problems.
 - `X` - Points to the latest release with the same major version.
 - `X.Y` - Points to the latest release with the same major and minor version.
 - `X.Y.Z` - Points to the latest release with the same major, minor and patch version.
 - `X.Y.Z-rc.A` - For each beta release, there is a specific tag published. It could contain some problems.
-- `[branch-name]` - Sometimes a branch needs some additional testing. If you want to test a specific branch and dont
-  want to build/checkout that locally, feel free contact a maintainer to get a pre-build docker image of that specific
-  branch.
+- `[branch-name]` - Sometimes a branch needs some additional testing. If you want to test a specific branch and don't
+  want to build/checkout that locally, feel free to contact a maintainer to get a pre-build docker image of that
+  specific branch.
 
 !> Please notice, that **downgrading** is **not supported**. Make a backup before updating, in case there goes something
 wrong. If you update to an `experimental` version, please also notice that you have to stay with that version until the
