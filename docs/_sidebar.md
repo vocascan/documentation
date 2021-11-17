@@ -8,14 +8,14 @@
 
 - Vocascan-Desktop
 
-  - [Intro](vocascan-desktop/intro.md)
+  - [Intro](vocascan-desktop/README.md)
   - [Installation](vocascan-desktop/installation.md)
   - [Contribute](vocascan-desktop/contribute.md)
   - [Changelog](vocascan-desktop/changelog.md)
 
 - Vocascan-Server
 
-  - [Intro](vocascan-server/intro.md)
+  - [Intro](vocascan-server/README.md)
   - [Installation](vocascan-server/installation/installation.md)
     - [PM2](vocascan-server/installation/pm2.md)
     - [Docker](vocascan-server/installation/docker.md)
