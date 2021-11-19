@@ -34,16 +34,25 @@
 
 ## Getting Started
 
-To use the great variety of Vocascan you need to set up a server. This is necessary because of the structure of the whole project. Vocascan is client-server based, which has the advantage that you have a central place where all operations come together. This simplifies synchronization between all your devices and makes everyday use much easier.
+To use the great variety of Vocascan you need to set up a server. This is necessary because of the structure of the
+whole project. Vocascan is client-server based, which has the advantage that you have a central place where all
+operations come together. This simplifies synchronization between all your devices and makes everyday use much easier.
 
-To set up your own server without any problems we provide you with extra predefined configurations and instructions. For a detailed overview of all the installation options, please visit our [server installation guide](vocascan-server/installation/installation). There you will also find the advantages and disadvantages as well as the use cases of the different options.
+To set up your own server without any problems we provide you with extra predefined configurations and instructions. For
+a detailed overview of all the installation options, please visit our
+[server installation guide](vocascan-server/installation/installation). There you will also find the advantages and
+disadvantages as well as the use cases of the different options.
 
-As soon as you have a running server, you can start learning. You just need to download the right client for your operating system. Again, we have put a lot of emphasis on making it as platform-independent as possible. To find and download the right client for your operating system, take a look at our [desktop installation guide](vocascan-desktop/installation).
+As soon as you have a running server, you can start learning. You just need to download the right client for your
+operating system. Again, we have put a lot of emphasis on making it as platform-independent as possible. To find and
+download the right client for your operating system, take a look at our
+[desktop installation guide](vocascan-desktop/installation).
 
-?> We are currently working on a major architecture restructuring in order to be able to use Vocascan in the browser very soon.
+?> We are currently working on a major architecture restructuring in order to be able to use Vocascan in the browser
+very soon.
 
-
-If any questions have come up, it's best to check out our [FAQ](general/faq). If they are still not answered, feel free to contact a maintainer. Check the [contact](#contact) section for more information.
+If any questions have come up, it's best to check out our [FAQ](general/faq). If they are still not answered, feel free
+to contact a maintainer. Check the [contact](#contact) section for more information.
 
 ## Contact
 
