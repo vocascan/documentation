@@ -56,7 +56,10 @@
             "https://raw.githubusercontent.com/vocascan/vocascan-desktop/main/CHANGELOG.md",
           "/vocascan-server/changelog": "https://raw.githubusercontent.com/vocascan/vocascan-server/main/CHANGELOG.md",
           "/vocascan-desktop/README": "https://raw.githubusercontent.com/vocascan/vocascan-desktop/main/README.md",
+          // "/vocascan-desktop/README":
+          //   "https://raw.githubusercontent.com/vocascan/vocascan-desktop/docs/readme-update/README.md",
           "/vocascan-server/README": "https://raw.githubusercontent.com/vocascan/vocascan-server/main/README.md",
+          "/.*/_sidebar.md": "/_sidebar.md",
         },
         repo: "vocascan/documentation",
         loadSidebar: true,
@@ -71,17 +74,20 @@
         plugins: [
           function (hook, vm) {
             hook.beforeEach(function (html) {
-              const isRaw = vm.route.file.slice(0, 33) === "https://raw.githubusercontent.com";
-              const url = isRaw
-                ? vm.route.file.replace(
-                    /https:\/\/raw\.githubusercontent\.com\/(\S+?)\/(\S+?)\/(\S+?)\/(.*)/,
-                    "https://github.com/$1/$2/tree/$3/$4"
-                  )
-                : "https://github.com/vocascan/documentation/tree/main/docs/" + vm.route.file;
-              const editHtml =
-                '<a href="' + url + '" target="_black" rel="noopener noreferrer">:memo: EDIT DOCUMENT</a>\n';
+              const isRaw = /githubusercontent\.com/.test(vm.route.file);
+              let url = "https://github.com/vocascan/documentation/blob/main/docs/" + vm.route.file;
 
-              return editHtml + html + "\n----\n" + (isRaw ? "" : "Last modified {docsify-updated} ") + editHtml;
+              if (isRaw) {
+                url = vm.route.file.replace(
+                  /https:\/\/raw\.githubusercontent\.com\/(\S+?)\/(\S+?)\/(\S+?)\/(.*)/,
+                  "https://github.com/$1/$2/blob/$3/$4"
+                );
+              }
+
+              const editHtml =
+                '<a href="' + url + '" target="_black" rel="noopener noreferrer">:memo: Edit document</a>\n';
+
+              return html + "\n----\n" + (isRaw ? "" : "Last modified {docsify-updated} ") + editHtml;
             });
           },
         ],
