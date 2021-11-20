@@ -1,3 +1,4 @@
+<div id="top"></div>
 <br />
 <div align="center">
   <a href="https://vocascan.com">
@@ -15,6 +16,8 @@
     <a href="https://discord.vocascan.com">Discord</a>
   </p>
 </div>
+
+
 
 # Welcome to Vocascan
 
@@ -53,6 +56,18 @@ very soon.
 
 If any questions have come up, it's best to check out our [FAQ](general/faq). If they are still not answered, feel free
 to contact a maintainer. Check the [contact](#contact) section for more information.
+
+## Roadmap
+See the of the [desktop](https://github.com/vocascan/vocascan-desktop/projects/1) and [server](https://github.com/vocascan/vocascan-server/projects/1) repository for a full list of proposed features (and known issues).
+
+1. Desktop
+
+- [ ] Theming
+- [ ] Outsource Frontend as a website
+
+2. Server
+- [ ] Integration tests
+- [ ] Port whole Code to TypeScript
 
 ## Contact
 
