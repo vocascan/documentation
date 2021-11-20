@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD041 MD033 MD029 -->
 <br />
 <div align="center">
   <a href="https://vocascan.com">
@@ -18,13 +19,13 @@
 
 # Welcome to Vocascan
 
-> Digitalization is creating a huge change in the world. We no longer only have the chance to communicate with our
-> fellow human beings in the vicinity, but to interact quickly and easily around the entire globe. Language is our most
-> important medium, which helps us to interact with the other person. A common language helps to make life easier and to
-> break barriers. That's why we founded Vocascan, a server-client based open-source vocabulary trainer. We believe that
-> everyone should have the chance to learn another language for free and in their own way. Based on the ever-proven
-> principle of flashcards, we have developed a highly configurable trainer that has many settings to adapt it to your
-> learning methods and strategies.
+Digitalization is creating a huge change in the world. We no longer only have the chance to communicate with our fellow
+human beings in the vicinity, but to interact quickly and easily around the entire globe. Language is our most important
+medium, which helps us to interact with the other person. A common language helps to make life easier and to break
+barriers. That's why we founded Vocascan, a server-client based open-source vocabulary trainer. We believe that everyone
+should have the chance to learn another language for free and in their own way. Based on the ever-proven principle of
+flashcards, we have developed a highly configurable trainer that has many settings to adapt it to your learning methods
+and strategies.
 
 ## Core Features
 
