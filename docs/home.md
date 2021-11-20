@@ -16,8 +16,6 @@
   </p>
 </div>
 
-
-
 # Welcome to Vocascan
 
 > Digitalization is creating a huge change in the world. We no longer only have the chance to communicate with our
@@ -57,7 +55,10 @@ If any questions have come up, it's best to check out our [FAQ](general/faq). If
 to contact a maintainer. Check the [contact](#contact) section for more information.
 
 ## Roadmap
-See the of the [desktop](https://github.com/vocascan/vocascan-desktop/projects/1) and [server](https://github.com/vocascan/vocascan-server/projects/1) repository for a full list of proposed features (and known issues).
+
+See the of the [desktop](https://github.com/vocascan/vocascan-desktop/projects/1) and
+[server](https://github.com/vocascan/vocascan-server/projects/1) repository for a full list of proposed features (and
+known issues).
 
 1. Desktop
 
@@ -65,6 +66,7 @@ See the of the [desktop](https://github.com/vocascan/vocascan-desktop/projects/1
 - [ ] Outsource Frontend as a website
 
 2. Server
+
 - [ ] Integration tests
 - [ ] Port whole Code to TypeScript
 
