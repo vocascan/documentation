@@ -1,6 +1,15 @@
 :root {
   --text-color-tertiary: #727cf5;
   --toc-width: 260px;
+
+  --docsifytabs-border-color: var(--textColor);
+  --docsifytabs-tab-background: var(--background);
+  --docsifytabs-tab-background--active: var(--accent);
+  --docsifytabs-tab-color: var(--textColor);
+}
+
+.medium-zoom-overlay {
+  background-color: var(--background) !important;
 }
 
 .app-name img {
