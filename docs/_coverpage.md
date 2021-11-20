@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD041 MD033 -->
 
 ![logo](_media/logo/color-round.svg ":size=15%")
 
