@@ -117,7 +117,9 @@ var buildTOC = function (options) {
     var currentLevel = getLevel(curr.tagName);
     var offset = currentLevel - prev;
 
-    wrapper = offset > 0 ? createList(lastLi, offset) : jumpBack(wrapper, -offset * 2);
+    if (lastLi) {
+      wrapper = offset > 0 ? createList(lastLi, offset) : jumpBack(wrapper, -offset * 2);
+    }
 
     wrapper = wrapper || ret;
 

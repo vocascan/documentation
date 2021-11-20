@@ -56,8 +56,6 @@
             "https://raw.githubusercontent.com/vocascan/vocascan-desktop/main/CHANGELOG.md",
           "/vocascan-server/changelog": "https://raw.githubusercontent.com/vocascan/vocascan-server/main/CHANGELOG.md",
           "/vocascan-desktop/README": "https://raw.githubusercontent.com/vocascan/vocascan-desktop/main/README.md",
-          // "/vocascan-desktop/README":
-          //   "https://raw.githubusercontent.com/vocascan/vocascan-desktop/docs/readme-update/README.md",
           "/vocascan-server/README": "https://raw.githubusercontent.com/vocascan/vocascan-server/main/README.md",
           "/.*/_sidebar.md": "/_sidebar.md",
         },
@@ -74,6 +72,16 @@
         plugins: [
           function (hook, vm) {
             hook.beforeEach(function (html) {
+              // fix relative links in readme
+              if (/githubusercontent\.com\/.*\/README.md/i.test(vm.route.file)) {
+                const baseUrl = vm.route.file.replace(/(.*)\/README.md/i, "$1/");
+
+                html = html
+                  .replace(/src="((?!http).*?)"/gim, 'src="' + baseUrl + '$1"')
+                  .replace(/\[(.*)\]\((((?!http).*?))\)/gim, "[$1](" + baseUrl + "$2)");
+              }
+
+              // add edit page link
               const isRaw = /githubusercontent\.com/.test(vm.route.file);
               let url = "https://github.com/vocascan/documentation/blob/main/docs/" + vm.route.file;
 
@@ -84,10 +92,15 @@
                 );
               }
 
-              const editHtml =
-                '<a href="' + url + '" target="_black" rel="noopener noreferrer">:memo: Edit document</a>\n';
+              html =
+                html +
+                "\n----\n" +
+                (isRaw ? "" : "Last modified {docsify-updated} ") +
+                '<a href="' +
+                url +
+                '" target="_black" rel="noopener noreferrer">:memo: Edit document</a>\n';
 
-              return html + "\n----\n" + (isRaw ? "" : "Last modified {docsify-updated} ") + editHtml;
+              return html;
             });
           },
         ],

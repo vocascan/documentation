@@ -29,7 +29,7 @@
 }
 
 .page_toc a:before {
-  content: "• ";
+  content: "";
   color: var(--textColor);
 }
 
