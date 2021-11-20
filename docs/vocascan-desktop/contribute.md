@@ -1,58 +1,59 @@
 # How to contribute
 
-1. Install vocascan-server
+## 1. Install vocascan-server
 
-   see the vocascan-server [installation guide](vocascan-server/installation)
+see the vocascan-server [installation guide](vocascan-server/installation/installation)
 
-2. Fork the [vocascan-desktop](https://github.com/vocascan/vocascan-desktop) repository
+## 2. Forking
 
-   ![how to fork](../_media/images/vocascan-desktop-fork.png)
+Fork the [vocascan-desktop](https://github.com/vocascan/vocascan-desktop) repository
 
-3. Clone your fork
+![how to fork](../_media/images/vocascan-desktop-fork.png)
 
-   ```bash
-   git clone https://github.com/<username>/vocasan-desktop.git
-   ```
+## 3. Clone your fork
 
-4. Checkout experimental
+```bash
+git clone https://github.com/<username>/vocasan-desktop.git
+```
 
-   ```bash
-   git checkout experimental
-   ```
+## 4. Checkout experimental
 
-5. Create your own branch
+```bash
+git checkout experimental
+```
 
-   ```bash
-   git checkout -b my-awesome-feature
-   ```
+## 5. Create your own branch
 
-6. Install dependencies
+```bash
+git checkout -b my-awesome-feature
+```
 
-   ```bash
-   npm install
-   ```
+## 6. Install dependencies
 
-7. Run in dev mode
+```bash
+npm install
+```
 
-   ```bash
-   npm run start
-   ```
+## 7. Run in dev mode
 
-8. Add your awesome feature
+```bash
+npm run start
+```
 
-9. Commit and push changes
+## 8. Add your awesome feature
 
-   ```bash
-   git add .
-   git commit -m "added my awesome feature"
-   git push
-   ```
+## 9. Commit and push changes
 
-10. Create an pull request
+```bash
+git add .
+git commit -m "added my awesome feature"
+git push
+```
 
-    open <https://github.com/vocascan/vocascan-desktop/compare/experimental...[username>]:my-awesome-feature and press
-    `Create pull request`, fill out the template, make sure the `Allow edits and access to secrets by maintainers`
-    checkbox is checked and press again `Create pull request`. Now you're ready to wait for feedback from the
-    maintainers.
+## 10. Create a pull request
 
-    ![how to open a pull request](../_media/images/vocascan-desktop-pull-request.png)
+open `https://github.com/vocascan/vocascan-desktop/compare/experimental...[username]:my-awesome-feature` and press
+`Create pull request`, fill out the template, make sure the `Allow edits and access to secrets by maintainers` checkbox
+is checked and press again `Create pull request`. Now you're ready to wait for feedback from the maintainers.
+
+![How to open a pull request](../_media/images/vocascan-desktop-pull-request.png)

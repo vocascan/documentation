@@ -51,6 +51,14 @@
 
     <script>
       window.$docsify = {
+        alias: {
+          "/vocascan-desktop/changelog":
+            "https://raw.githubusercontent.com/vocascan/vocascan-desktop/main/CHANGELOG.md",
+          "/vocascan-server/changelog": "https://raw.githubusercontent.com/vocascan/vocascan-server/main/CHANGELOG.md",
+          "/vocascan-desktop/README": "https://raw.githubusercontent.com/vocascan/vocascan-desktop/main/README.md",
+          "/vocascan-server/README": "https://raw.githubusercontent.com/vocascan/vocascan-server/main/README.md",
+          "/.*/_sidebar.md": "/_sidebar.md",
+        },
         repo: "vocascan/documentation",
         loadSidebar: true,
         logo: "_media/logo/color-round.svg",
@@ -64,10 +72,35 @@
         plugins: [
           function (hook, vm) {
             hook.beforeEach(function (html) {
-              const url = "https://github.com/vocascan/documentation/tree/main/docs/" + vm.route.file;
-              const editHtml = "[:memo: EDIT DOCUMENT](" + url + ")\n";
+              // fix relative links in readme
+              if (/githubusercontent\.com\/.*\/README.md/i.test(vm.route.file)) {
+                const baseUrl = vm.route.file.replace(/(.*)\/README.md/i, "$1/");
 
-              return editHtml + html + "\n----\n" + "Last modified {docsify-updated} " + editHtml;
+                html = html
+                  .replace(/src="((?!http).*?)"/gim, 'src="' + baseUrl + '$1"')
+                  .replace(/\[(.*)\]\((((?!http).*?))\)/gim, "[$1](" + baseUrl + "$2)");
+              }
+
+              // add edit page link
+              const isRaw = /githubusercontent\.com/.test(vm.route.file);
+              let url = "https://github.com/vocascan/documentation/blob/main/docs/" + vm.route.file;
+
+              if (isRaw) {
+                url = vm.route.file.replace(
+                  /https:\/\/raw\.githubusercontent\.com\/(\S+?)\/(\S+?)\/(\S+?)\/(.*)/,
+                  "https://github.com/$1/$2/blob/$3/$4"
+                );
+              }
+
+              html =
+                html +
+                "\n----\n" +
+                (isRaw ? "" : "Last modified {docsify-updated} ") +
+                '<a href="' +
+                url +
+                '" target="_black" rel="noopener noreferrer">:memo: Edit document</a>\n';
+
+              return html;
             });
           },
         ],
@@ -117,15 +150,19 @@
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 
     <!-- 3rd-party plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-    <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+    <script src="_media/plugins/docsify-toc/toc.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
 
     <!-- Own plugins -->
-    <script src="_media/plugins/countdown/countdown.js"></script>
+    <!-- <script src="_media/plugins/countdown/countdown.js"></script> -->
+    <script src="_media/plugins/autoLink/autoLink.js"></script>
 
     <!-- Prism language support -->
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-toml.min.js"></script>
   </body>
 </html>

@@ -6,7 +6,7 @@ There are three ways to install vocascan-desktop.
 
 1. [Installer](#_1-installer)
 2. [Snap store](#_2-snap-store)
-3. [Build vocascan yourself](#_3-build-vocascan-yourself)
+3. [Build Vocascan yourself](#_3-build-vocascan-yourself)
 
 ## 1. Installer
 
@@ -15,9 +15,9 @@ There are three ways to install vocascan-desktop.
 3. install vocascan-desktop
 4. open vocascan-desktop
 
-!> On **Windows** you may need to confirm to trust the app when you open the app for the first time.
+!> On **Windows**, you may need to confirm to trust the app when you open the app for the first time.
 
-!> On **macOS** you may need to adjust your security settings to open the app. You can do so following the
+!> On **macOS**, you may need to adjust your security settings to open the app. You can do so following the
 [apple support guide](https://support.apple.com/guide/mac-help/mh40616/mac)
 
 5. login to your server
@@ -26,7 +26,7 @@ There are three ways to install vocascan-desktop.
 
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/vocascan-desktop)
 
-On ubuntu systems snap is preinstalled. So you are able to use the ubuntu software manager.
+On Ubuntu systems, snap is preinstalled. So you are able to use the Ubuntu software manager.
 
 1. Install snap
 
@@ -76,10 +76,10 @@ On ubuntu systems snap is preinstalled. So you are able to use the ubuntu softwa
    npm run start
    ```
 
-   - But if you want to build it, to get a finished installer, AppImage, etc you can use this:
+   - But if you want to build it, to get a finished installer, AppImage, etc. you can use this:
 
    ```bash
    npm run build
    ```
 
-   this command will create you installers and executables depending on which OS you are using.
+   This command will create you installers and executables depending on which OS you are using.
