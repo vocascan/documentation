@@ -41,9 +41,12 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 In the server repository, there are sample `docker-compose.yml` configuration files in separate
 [folders](https://github.com/vocascan/vocascan-server/tree/main/docker). As described in the
-[configuration](vocascan-server/configuration) page:
+[configuration](vocascan-server/configuration) page, you can either use the config file directly, or set the config via
+environment variables.
 
-3.1 You can either use the config file directly:
+<!-- tabs:start -->
+
+### **Config file**
 
 download vocascan.config.js (to use a fully extended config, have a look at this
 [config file](https://raw.githubusercontent.com/vocascan/vocascan-server/main/vocascan.config.example.js))
@@ -73,9 +76,7 @@ nano docker-compose.yml
 nano vocascan.config.js
 ```
 
----
-
-3.2 or set the config via environment variables:
+### **Environment variables**
 
 download docker-compose file
 
@@ -90,6 +91,8 @@ Remember to [configure](vocascan-server/configuration) the file after you needs.
 ```bash
 nano docker-compose.yml
 ```
+
+<!-- tabs:end -->
 
 ### Versions
 
