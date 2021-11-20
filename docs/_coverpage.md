@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD041 -->
+
 ![logo](_media/logo/color-round.svg ":size=15%")
 
 # VOCASCAN <small>1.1.0</small>
