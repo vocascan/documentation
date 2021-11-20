@@ -15,7 +15,7 @@
 1. Write changelog into the `CHANGELOG.md` file
 1. Merge after review
 1. Wait for the CI to pass, build and publish
-1. Make an unpublished PR, copy the changelog into the release description and publish
+1. Make an unpublished release, copy the changelog into the release description and publish
 1. Add `-rc.x` label back in the experimental branch
 
 **RC version**
