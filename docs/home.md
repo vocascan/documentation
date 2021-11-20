@@ -1,4 +1,3 @@
-<div id="top"></div>
 <br />
 <div align="center">
   <a href="https://vocascan.com">
