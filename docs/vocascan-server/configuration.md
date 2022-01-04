@@ -19,6 +19,7 @@ There are 2 ways to configure a vocascan-server.
       port: 5000,
       jwt_secret: "abc",
       salt_rounds: 10,
+      cors: ["https://web.example1.com", "https://web.example2.com"],
     },
   };
   ```
@@ -28,6 +29,8 @@ There are 2 ways to configure a vocascan-server.
   VOCASCAN__SERVER__PORT=5000
   VOCASCAN__SERVER__JWT_SECRET=abc
   VOCASCAN__SERVER__SALT_ROUNDS=10
+  VOCASCAN__SERVER__CORS_1=https://web.example1.com
+  VOCASCAN__SERVER__CORS_2=https://web.example2.com
   ```
 
 !> **Note:** You need to restart the server to make the changes effective.
@@ -40,12 +43,13 @@ There are 2 ways to configure a vocascan-server.
 
 ## Server (`server`)
 
-| Name                  | Default | Description                                                                                                                                                                                |
-| --------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `port`                | `5000`  | Defines the port on which the server is listening.                                                                                                                                         |
-| `jwt_secret`          |         | Secret is used to sign the payload of the jwt token, change this to a unique string. Everyone who knows that secret is able to act as other vocascan users.                                |
-| `salt_rounds`         | `10`    | The salt rounds define the coast efficiency factor to hash passwords with bcrypt. For more info, see [bcrypts documentation](https://github.com/kelektiv/node.bcrypt.js#a-note-on-rounds). |
-| `registration_locked` | `false` | Locks the server and only allows registrations with an invite code.                                                                                                                        |
+| Name                  | Default | Description                                                                                                                                                                                                         |
+| --------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `port`                | `5000`  | Defines the port on which the server is listening.                                                                                                                                                                  |
+| `jwt_secret`          |         | Secret is used to sign the payload of the jwt token, change this to a unique string. Everyone who knows that secret is able to act as other vocascan users.                                                         |
+| `salt_rounds`         | `10`    | The salt rounds define the coast efficiency factor to hash passwords with bcrypt. For more info, see [bcrypts documentation](https://github.com/kelektiv/node.bcrypt.js#a-note-on-rounds).                          |
+| `registration_locked` | `false` | Locks the server and only allows registrations with an invite code.                                                                                                                                                 |
+| `cors`                | `false` | This can be either a boolean (`true`/`false`), a string with a single domain (`http://localhost:3000`) or a asterisk (`*`) to allow all domains, or a array (`["http://localhost:3000", "http://localhost:4000"]`). |
 
 ## Database (`database`)
 
