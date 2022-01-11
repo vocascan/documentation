@@ -53,7 +53,7 @@ On Ubuntu systems, snap is preinstalled. So you are able to use the Ubuntu softw
 2. Download the vocascan-desktop repository
 
    ```bash
-   git clone https://github.com/vocascan/vocascan-desktop.git
+   git clone --recurse-submodules https://github.com/vocascan/vocascan-desktop.git
    ```
 
 3. Change directory
