@@ -107,6 +107,16 @@ For more information about the logger section see [logging guide](vocascan-serve
 | `max_files`    |         | Limit the number of files created when the size of the log file is exceeded.                                                           |
 | `archive_logs` |         | If true, all log files, but the current one will be packed into a zip archive.                                                         |
 
+## Custom Pages (`pages.`)
+
+| Name       | Default | Required | Description                                                                                                                                                                                                                                             |
+| ---------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `url`      |         | `true`   | The route on which your page will be displayed                                                                                                                                                                                                          |
+| `fallback` |         | `true`   | Defines a fallback page, if neither a language is specified per query parameter (`?lang=`), nor the queried language exists. You can either set a static page or a redirect to one of the defined languages (recommended if you use multiple languages) |
+| `type`     |         | `true`   | Defines whether the server renders a static page or just redirects to another. Options: `file` or `redirect`                                                                                                                                            |
+| `location` |         | `true`   | Either the path to your html file, or an internet address for the redirect                                                                                                                                                                              |
+| `langs`    |         | `false`  | Option to define multiple language for your static file or redirect                                                                                                                                                                                     |
+
 ## API (`api`)
 
 | Name             | Default | Description                                   |
