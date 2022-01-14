@@ -1,0 +1,29 @@
+.sidebar-nav {
+  padding-left: 10px;
+}
+
+.sidebar-nav li {
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+}
+
+.sidebar-nav .collapse {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 14px;
+  left: -14px;
+  border-right: #505d6b 1px solid;
+  border-bottom: #505d6b 1px solid;
+  transition: transform 0.1s ease-in;
+  transform: rotate(45deg);
+}
+
+.sidebar-nav .collapsed > ul {
+  display: none;
+}
+
+.sidebar-nav .collapsed > .collapse {
+  transform: rotate(-45deg);
+}
