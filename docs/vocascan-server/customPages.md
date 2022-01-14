@@ -6,7 +6,7 @@ and therefore have to provide a privacy policy or other information. To add your
 files as a volume to the Docker container and define them in `vocascan.config.js` or the `env variables`.
 
 !> The Vocascan frontend needs predefined routes (`url`) to find specific pages:</br> 1. Legal Notice:
-`/legal-notice`</br>2. Privacy Policy: `/privacy-policy`</br>3. Terms and Conditions: `/terms-and-conditions`
+`/p/legal-notice`</br>2. Privacy Policy: `/p/privacy-policy`</br>3. Terms and Conditions: `/p/terms-and-conditions`
 
 ## Create a folder
 
@@ -67,8 +67,8 @@ absolute path. If you don't use Docker or used a different path, please make sur
 ...
 pages: {
     pageOne: {
-      url: '/page-one',
-      fallback: { type: 'redirect', location: '/page-one?lang=en' },
+      url: '/p/page-one',
+      fallback: { type: 'redirect', location: '/p/page-one?lang=en' },
       langs: {
         en: { type: 'file', location: '/root/vocascan/staticPages/privacy-en.html' },
         de: { type: 'file', location: '/root/vocascan/staticPages/privacy-de.html' },
@@ -76,15 +76,15 @@ pages: {
       },
     },
     pageTwo: {
-      url: '/page-two',
-      fallback: { type: 'redirect', location: '/page-two?lang=en' },
+      url: '/p/page-two',
+      fallback: { type: 'redirect', location: '/p/page-two?lang=en' },
       langs: {
         en: { type: 'file', location: '/root/vocascan/staticPages/privacy-en.html' },
         fr: { type: 'file', location: '/root/vocascan/staticPages/privacy-fr.html' },
       },
     },
     pageThree: {
-      url: '/page-three',
+      url: '/p/page-three',
       fallback: { type: 'redirect', location: 'https://another-custom-redirect' },
     },
   },
@@ -93,6 +93,9 @@ pages: {
 
 For more information about the props, visit our
 [configuration sheet](vocascan-server/configuration?id=custom-pages-pages).
+
+!> If you host the Vocascan frontend on the same domain as the server, please use `/p/` before your routes to avoid
+overlaps.
 
 ?> the `langs` prop is just optional. If you don't want to provide any translations, you can also set your single static
 page or redirect under the `fallback` prop.
@@ -110,8 +113,9 @@ sudo docker-compose up -d
 Now all your static pages and redirects are accessible under their respective routes. If you now want to display a
 specific language defined by you, you can do this via the `lang` query parameter. Just a small example.
 
-`https://our-domain.com/page-one?lang=en`: will lead us to the page defined under `pageOne.langs.de`.
+`https://our-domain.com/p/page-one?lang=en`: will lead us to the page defined under `pageOne.langs.de`.
 
-`https://our-domain.com/page-one?lang=ru`: will redirect us to the fallback page, because this language is not defined.
+`https://our-domain.com/p/page-one?lang=ru`: will redirect us to the fallback page, because this language is not
+defined.
 
-`https://our-domain.com/page-one`: will render the fallback page or redirect to the link defined in the fallback prop.
+`https://our-domain.com/p/page-one`: will render the fallback page or redirect to the link defined in the fallback prop.
