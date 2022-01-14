@@ -43,6 +43,7 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css" />
     <link rel="stylesheet" href="_media/plugins/countdown/countdown.css" />
+    <link rel="stylesheet" href="_media/plugins/collapse-sidebar/collapse-sidebar.css" />
     <link rel="stylesheet" href="_media/style/style.css" />
     <link rel="icon" href="_media/logo/favicon.ico" />
   </head>
@@ -72,6 +73,7 @@
         themeColor: "#727cf5",
         formatUpdated: "{DD}.{MM}.{YYYY} {HH}:{mm}",
         coverpage: true,
+        sidebarDisplayLevel: 1,
         plugins: [
           function (hook, vm) {
             hook.beforeEach(function (html) {
@@ -162,6 +164,7 @@
     <!-- Own plugins -->
     <!-- <script src="_media/plugins/countdown/countdown.js"></script> -->
     <script src="_media/plugins/autoLink/autoLink.js"></script>
+    <script src="_media/plugins/collapse-sidebar/collapse-sidebar.js"></script>
 
     <!-- Prism language support -->
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
