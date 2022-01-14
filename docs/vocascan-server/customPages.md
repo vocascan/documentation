@@ -10,7 +10,7 @@ files as a volume to the Docker container and define them in `vocascan.config.js
 
 ## Create a folder
 
-Create a folder in the folder where your `docker-compose.yml` is located. In this you store all your static files.
+Create a folder in the directory where your `docker-compose.yml` is located. In this you store all your static files.
 
 ```bash
 mkdir staticPages
@@ -51,17 +51,27 @@ vocascan:
 ```
 
 ?> As with the config file, we also store our folder under `/root/vocascan`. You are welcome to use a different path,
-but remember to use it in the config as well.
+but remember to use it in the server config as well.
 
-## Update Vocascan config file
+## Update the server config
 
-After that, you only have to update the config file so that your static pages are recognized and displayed by the
-server. To achieve this, you just have to add the path to your desired static pages or redirects.
+!> We recommend you to use a `vocascan.config.js` file instead of `env variables` to keep a better overview.
 
-This is an example configuration to show you how it can look like with the files created above.
+After that, you only have to update the config file so that your static pages and redirects will be recognized and
+integrated by the server. To achieve this, you just have to add the path to your desired static pages or redirects.
+
+In the following we show you an example configuration to show you how it can look like with the files created above:
+
+Open `vocascan.config.js`
+
+```bash
+nano vocascan.config.js
+```
+
+and add your static file and redirects
 
 ?> In our example, we created the volume for our files under `/root/vocascan/`. This is why we use this path as our
-absolute path. If you don't use Docker or used a different path, please make sure to use this.
+absolute path. If you don't use Docker or used a different path, please make sure to take this.
 
 ```js
 ...
@@ -113,9 +123,9 @@ sudo docker-compose up -d
 Now all your static pages and redirects are accessible under their respective routes. If you now want to display a
 specific language defined by you, you can do this via the `lang` query parameter. Just a small example.
 
-`https://our-domain.com/p/page-one?lang=en`: will lead us to the page defined under `pageOne.langs.de`.
+`https://our-domain.com/p/page-one?lang=en`: Will lead us to the page defined under `pageOne.langs.de`.
 
-`https://our-domain.com/p/page-one?lang=ru`: will redirect us to the fallback page, because this language is not
+`https://our-domain.com/p/page-one?lang=ru`: Will redirect us to the fallback page, because this language is not
 defined.
 
-`https://our-domain.com/p/page-one`: will render the fallback page or redirect to the link defined in the fallback prop.
+`https://our-domain.com/p/page-one`: Will render the fallback page or redirect to the link defined in the fallback prop.
