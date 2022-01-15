@@ -41,9 +41,9 @@ This tutorial shows you how to set up a Vocascan frontend with a Traefik reverse
 SSL encryption and make the server easier to reach using a domain. This guide requires the
 [traefik installation](vocascan-server/installation/traefik) of the server.
 
-| Pros ✔️                                                                  | Cons ❌           |
-| ------------------------------------------------------------------------ | ----------------- |
-| SSL encryption (more secure)                                             | more complex      |
-| Own domain to make server easier to reach                                | You need a domain |
-| Scalability                                                              |                   |
-| Easy to integrate if you already set up your voascan-server with traefik |                   |
+| Pros ✔️                                                                   | Cons ❌           |
+| ------------------------------------------------------------------------- | ----------------- |
+| SSL encryption (more secure)                                              | more complex      |
+| Own domain to make server easier to reach                                 | You need a domain |
+| Scalability                                                               |                   |
+| Easy to integrate if you already set up your vocascan-server with traefik |                   |

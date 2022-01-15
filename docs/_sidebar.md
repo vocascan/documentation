@@ -22,6 +22,7 @@
     - [Docker](vocascan-frontend/installation/docker.md)
     - [Traefik](vocascan-frontend/installation/traefik.md)
   - [Configuration](vocascan-frontend/configuration.md)
+  - [Troubleshooting](vocascan-frontend/troubleshooting.md)
   - [Contribute](vocascan-frontend/contribute.md)
   - [Changelog](vocascan-frontend/changelog.md)
 
