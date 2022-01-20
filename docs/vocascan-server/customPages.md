@@ -40,7 +40,7 @@ nano docker-compose.yml
 
 and add the volume for your `staticPages` folder
 
-```yaml
+```yml
 vocascan:
   image: vocascan/server:latest
   ...
