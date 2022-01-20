@@ -2,8 +2,8 @@
 
 We provide you with the possibility to host your own static pages or make redirects to other websites on your Vocascan
 server and make them accessible to the public. This can be very helpful if you have to comply with legal requirements
-and therefore have to provide a privacy policy or other information. To add your page to the server, you need to add the
-files as a volume to the Docker container and define them in `vocascan.config.js` or the `env variables`.
+and therefore have to provide a privacy policy or other information. To add your page to the server, you need to define
+them in `vocascan.config.js` or the `env variables`.
 
 !> The Vocascan frontend needs predefined routes (`url`) to find specific pages:</br> 1. Legal Notice:
 `/p/legal-notice`</br>2. Privacy Policy: `/p/privacy-policy`</br>3. Terms and Conditions: `/p/terms-and-conditions`
@@ -55,10 +55,14 @@ but remember to use it in the server config as well.
 
 ## Update the server config
 
-!> We recommend you to use a `vocascan.config.js` file instead of `env variables` to keep a better overview.
-
 After that, you only have to update the config file so that your static pages and redirects will be recognized and
 integrated by the server. To achieve this, you just have to add the path to your desired static pages or redirects.
+
+!> We recommend you to use a `vocascan.config.js` file instead of `env variables` to keep a better overview.
+
+<!-- tabs:start -->
+
+### **Config file**
 
 In the following we show you an example configuration to show you how it can look like with the files created above:
 
@@ -100,6 +104,25 @@ pages: {
   },
 ...
 ```
+
+### **Environment variables**
+
+An ENV config example could look like this.
+
+```env
+VOCASCAN__PAGES__PAGEONE__URL='/p/page-one'
+VOCASCAN__PAGES__PAGEONE__FALLBACK__TYPE='redirect'
+VOCASCAN__PAGES__PAGEONE__FALLBACK__LOCATION='/p/page-one?lang=en'
+VOCASCAN__PAGES__PAGEONE__LANGS__EN__TYPE='file'
+VOCASCAN__PAGES__PAGEONE__LANGS__EN__LOCATION='/root/vocascan/staticPages/privacy-en.html'
+VOCASCAN__PAGES__PAGEONE__LANGS__DE__TYPE='file'
+VOCASCAN__PAGES__PAGEONE__LANGS__DE__LOCATION='/root/vocascan/staticPages/privacy-de.html'
+VOCASCAN__PAGES__PAGEONE__LANGS__FR__TYPE='file'
+VOCASCAN__PAGES__PAGEONE__LANGS__FR__LOCATION='https://my-redirect-page.com'
+
+```
+
+<!-- tabs:end -->
 
 For more information about the props, visit our
 [configuration sheet](vocascan-server/configuration?id=custom-pages-pages).
