@@ -35,7 +35,7 @@ inside of docker.
 | Scalability                                                                | No own domain                          |
 | Its easy to integrate if you already host vocascan-server inside of docker |                                        |
 
-## 4.&nbsp;[Traefik](vocascan-frontend/installation/traefik) _(coming soon)_
+## 4.&nbsp;[Traefik](vocascan-frontend/installation/traefik)
 
 This tutorial shows you how to set up a Vocascan frontend with a Traefik reverse proxy to achieve maximum security with
 SSL encryption and make the server easier to reach using a domain. This guide requires the
