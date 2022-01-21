@@ -5,8 +5,15 @@ server and make them accessible to the public. This can be very helpful if you h
 and therefore have to provide a privacy policy or other information. To add your page to the server, you need to define
 them in `vocascan.config.js` or the `env variables`.
 
-!> The Vocascan frontend needs predefined routes (`url`) to find specific pages:</br> 1. Legal Notice:
-`/p/legal-notice`</br>2. Privacy Policy: `/p/privacy-policy`</br>3. Terms and Conditions: `/p/terms-and-conditions`
+## Predefined routes
+
+The Vocascan frontend needs predefined routes (`url`) to find specific pages:
+
+| Type                 | Route                   |
+| -------------------- | ----------------------- |
+| Legal Notice         | /p/legal-notice         |
+| Privacy Policy       | /p/privacy-policy       |
+| Terms and Conditions | /p/terms-and-conditions |
 
 ## Create a folder
 
