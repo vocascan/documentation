@@ -21,3 +21,5 @@ module.exports = {
   },
 };
 ```
+
+!> Setting cors to `*` is highly not recommended
