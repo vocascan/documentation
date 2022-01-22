@@ -71,7 +71,7 @@ integrated by the server. To achieve this, you just have to add the path to your
 
 ### **Config file**
 
-In the following we show you an example configuration to show you how it can look like with the files created above:
+In the following, we show you an example configuration to show you how it can look like with the files created above:
 
 Open `vocascan.config.js`
 
@@ -137,7 +137,7 @@ For more information about the props, visit our
 !> If you host the Vocascan frontend on the same domain as the server, please use `/p/` before your routes to avoid
 overlaps.
 
-?> the `langs` prop is just optional. If you don't want to provide any translations, you can also set your single static
+?> The `langs` prop is just optional. If you don't want to provide any translations, you can also set your single static
 page or redirect under the `fallback` prop.
 
 ## Update container (only when using Docker)
