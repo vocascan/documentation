@@ -9,11 +9,11 @@ them in `vocascan.config.js` or the `env variables`.
 
 The Vocascan frontend needs predefined routes (`url`) to find specific pages:
 
-| Type                 | Route                   |
-| -------------------- | ----------------------- |
-| Legal Notice         | /p/legal-notice         |
-| Privacy Policy       | /p/privacy-policy       |
-| Terms and Conditions | /p/terms-and-conditions |
+| Type                 | Route                     |
+| -------------------- | ------------------------- |
+| Legal Notice         | `/p/legal-notice`         |
+| Privacy Policy       | `/p/privacy-policy`       |
+| Terms and Conditions | `/p/terms-and-conditions` |
 
 ## Create a folder
 
@@ -86,7 +86,7 @@ absolute path. If you don't use Docker or used a different path, please make sur
 
 ```js
 ...
-pages: {
+  pages: {
     pageOne: {
       url: '/p/page-one',
       fallback: { type: 'redirect', location: '/p/page-one?lang=en' },
