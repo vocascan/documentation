@@ -8,14 +8,27 @@
 
 - Vocascan-Desktop
 
-  - [Intro](vocascan-desktop/README.md)
+  - [General](vocascan-desktop/README.md)
   - [Installation](vocascan-desktop/installation.md)
   - [Contribute](vocascan-desktop/contribute.md)
   - [Changelog](vocascan-desktop/changelog.md)
 
+- Vocascan-Frontend
+
+  - [General](vocascan-frontend/README.md)
+  - [Installation](vocascan-frontend/installation/installation.md)
+    - [Apache](vocascan-frontend/installation/apache.md)
+    - [Webspace](vocascan-frontend/installation/webspace.md)
+    - [Docker](vocascan-frontend/installation/docker.md)
+    - [Traefik](vocascan-frontend/installation/traefik.md)
+  - [Configuration](vocascan-frontend/configuration.md)
+  - [Troubleshooting](vocascan-frontend/troubleshooting.md)
+  - [Contribute](vocascan-frontend/contribute.md)
+  - [Changelog](vocascan-frontend/changelog.md)
+
 - Vocascan-Server
 
-  - [Intro](vocascan-server/README.md)
+  - [General](vocascan-server/README.md)
   - [Installation](vocascan-server/installation/installation.md)
     - [PM2](vocascan-server/installation/pm2.md)
     - [Docker](vocascan-server/installation/docker.md)
