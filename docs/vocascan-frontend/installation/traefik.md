@@ -28,7 +28,6 @@ frontend:
     - "traefik.http.routers.frontend.tls.certresolver=lets-encrypt"
     - "traefik.http.services.frontend.loadbalancer.server.port=80"
   networks:
-    - internal
     - web
 ```
 
