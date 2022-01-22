@@ -18,32 +18,32 @@ This tutorial shows you how to set up a Vocascan frontend using apache2, a webse
 
 This tutorial shows you how to set up a Vocascan frontend using a webspace.
 
-| Pros ✔️                                                  | Cons ❌ |
-| -------------------------------------------------------- | ------- |
-| You don't need to care about hosting a own apache server |         |
-| Easy to setup in the webinterface of your provider       |         |
+| Pros ✔️                                                   | Cons ❌ |
+| --------------------------------------------------------- | ------- |
+| You don't need to care about hosting an own apache server |         |
+| Easy to set up in the webinterface of your provider       |         |
 
 ## 3.&nbsp;[Docker](vocascan-frontend/installation/docker)
 
 This tutorial shows you how to easily set up a Vocascan frontend with minimal effort, ideal for your own home network
 inside of docker.
 
-| Pros ✔️                                                                    | Cons ❌                                |
-| -------------------------------------------------------------------------- | -------------------------------------- |
-| Easy to set up                                                             | More suitable for the internal network |
-| You don't need a domain                                                    | No SSL encryption                      |
-| Scalability                                                                | No own domain                          |
-| Its easy to integrate if you already host vocascan-server inside of docker |                                        |
+| Pros ✔️                                                                     | Cons ❌                                |
+| --------------------------------------------------------------------------- | -------------------------------------- |
+| Easy to set up                                                              | More suitable for the internal network |
+| You don't need a domain                                                     | No SSL encryption                      |
+| Scalability                                                                 | No own domain                          |
+| It's easy to integrate if you already host vocascan-server inside of docker |                                        |
 
 ## 4.&nbsp;[Traefik](vocascan-frontend/installation/traefik)
 
 This tutorial shows you how to set up a Vocascan frontend with a Traefik reverse proxy to achieve maximum security with
 SSL encryption and make the server easier to reach using a domain. This guide requires the
-[traefik installation](vocascan-server/installation/traefik) of the server.
+[Traefik installation](vocascan-server/installation/traefik) of the server.
 
 | Pros ✔️                                                                   | Cons ❌           |
 | ------------------------------------------------------------------------- | ----------------- |
 | SSL encryption (more secure)                                              | more complex      |
 | Own domain to make server easier to reach                                 | You need a domain |
 | Scalability                                                               |                   |
-| Easy to integrate if you already set up your vocascan-server with traefik |                   |
+| Easy to integrate if you already set up your vocascan-server with Traefik |                   |

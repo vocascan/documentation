@@ -2,8 +2,8 @@
 
 ## Prerequisites
 
-This guide assumes, that you already installed docker and docker-compose as it is described in the
-[install server via docker guide](vocascan-server/installation/docker).
+This guide assumes, that you have already installed docker and docker-compose as it is described in the
+["install server via docker guide"](vocascan-server/installation/docker).
 
 ## 1. Adjust docker-compose.yml
 
@@ -37,7 +37,7 @@ To configure your vocascan-frontend to match for your needs, you can use environ
 configuration options described in the [configuration](vocascan-frontend/configuration) page prefixed with `VOCASCAN_`.
 
 If you host a vocascan-frontend web service, you may want to set the `BASE_URL` so that the frontend is directly
-associated with the backend and the user has no possibility to change the server URL as it can be done in the desktop
+associated with the backend and the user has no possibility to change the server URL, as it can be done in the desktop
 app. If you set the `BASE_URL`, you may have already noticed, there is no selection screen anymore.
 
 ## 3. Start your container
