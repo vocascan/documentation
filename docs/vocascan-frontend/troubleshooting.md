@@ -23,3 +23,10 @@ module.exports = {
 ```
 
 !> Setting CORS to `*` is highly not recommended
+
+### Wrong BASE_URL
+
+If you dont see any CORS errors, but a double `/api` in your requests, you set the wrong base URL. The base url should
+be without a ending `/` and without `/api`.
+
+![baseURL Error](../_media/images/base-url-error.png)
