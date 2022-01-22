@@ -135,9 +135,11 @@ On top of that, replace this parts to your domain
                               ...
 18   - "traefik.frontend.rule=Host:monitor.your_domain.com"
                               ...
-33   - "traefik.http.routers.vocascan.rule=Host(`web.your_domain.com`)"
+33   - "traefik.http.routers.vocascan.rule=Host(`your_domain.com`) && PathPrefix(`/p/`, `/api`)"
                               ...
 ```
+
+?> The `/p/` PathPrefix is for the [custom pages](vocascan-server/customPages).
 
 ## 10. Start server
 
