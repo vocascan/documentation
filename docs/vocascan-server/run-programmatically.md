@@ -1,7 +1,7 @@
 # Run programmatically
 
-We also provide a way to integrate the vocascan-server directly into your nodeJS application. This could be useful if
-you want to run vocascan-server from inside of your electron client.
+We also provide a way to integrate the vocascan-server directly into your NodeJS application. This could be useful if
+you want to run vocascan-server within of your electron client.
 
 ## 1. Install via npm
 
@@ -14,13 +14,13 @@ npm i @vocascan/server
 
 ## 2. Run
 
-You can then import the `@vocascan/server` package and run the server. The first argument is an object containing your
-config described in [configuration](/vocascan-server/configuration). This function returns an Promise that resolves with
-a started `http` server object, so its also possible to stop that server afterwards or extend it with other middlewares
-or request handlers.
+Import the `@vocascan/server` package and run the server. The first argument is an object containing your config
+described in [configuration](/vocascan-server/configuration). This function returns an Promise that resolves with a
+started `http` server object, so its also possible to stop that server afterwards or extend it with other middlewares or
+request handlers.
 
-This example will start a vocascan-server on port `8989` with an inmemory sqlite database and an colorized console sql
-logger. After 2s the server stops automatically.
+This example will start a vocascan-server on port `8989` with an in-memory sqlite database and a colorized console sql
+logger. After two seconds the server stops accordingly.
 
 ```js
 const runServer = require("@vocascan/server");
