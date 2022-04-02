@@ -14,13 +14,13 @@ npm i @vocascan/server
 
 ## Create and start server
 
-Import the `@vocascan/server` package and run the server. The first argument is an object containing your config
-described in [configuration](/vocascan-server/configuration). This function returns an Promise that resolves with a
-started `http` server object, so its also possible to stop that server afterwards or extend it with other middlewares or
-request handlers.
+Import the `@vocascan/server` package, create and start the server. The first argument is an object containing your
+config described in [configuration](vocascan-server/configuration). This function returns a Promise that resolves with
+the server object created previously. With that system it's also possible to stop that server afterwards or extend it
+with other middlewares or request handlers.
 
-This example creates and starts a vocascan-server on port `8989` with an in-memory sqlite database and a colorized
-console sql logger. After two seconds the server stops imminently.
+This example creates and starts a vocascan-server on port `8989` with an in-memory sqlite database, a colorized console
+sql logger and a new route `/hello-world`. After two seconds the server stops imminently.
 
 ```js
 const { createServer, version } = require("@vocascan/server");
@@ -28,27 +28,36 @@ const { createServer, version } = require("@vocascan/server");
 (async () => {
   console.log(`Server version: ${version}`);
 
-  const server = await createServer({
-    server: {
-      port: 8989,
-      jwt_secret: "123",
-    },
-    database: {
-      dialect: "sqlite",
-      storage: ":memory:",
-    },
-    log: {
-      console: {
-        colorize: true,
-        enable_sql_log: true,
+  const server = await createServer(
+    {
+      server: {
+        port: 8989,
+        jwt_secret: "123",
+      },
+      database: {
+        dialect: "sqlite",
+        storage: ":memory:",
+      },
+      log: {
+        console: {
+          colorize: true,
+          enable_sql_log: true,
+        },
       },
     },
-  });
+    {
+      preLoad: (server) => {
+        server.app.get("/hello-world", (_req, res) => {
+          res.send("Hello World");
+        });
+      },
+    }
+  );
 
   await server.start();
 
   setTimeout(() => {
-    server.http.close();
+    server.stop();
   }, 2000);
 })();
 ```
@@ -63,18 +72,23 @@ This creates a server object with the following contents.
 
 **Arguments:**
 
-The server configuration as an object; for detailed documentation see the [configuration](vocascan-server/configuration)
-guide.
+| key               | description                                                                                                     |
+| ----------------- | --------------------------------------------------------------------------------------------------------------- |
+| `config`          | Configuration object, see the [configuration](vocascan-server/configuration) guide.                             |
+| `options.preLoad` | Function the will be executed before adding the 404 and error handlers to extend the server with custom routes. |
 
 **Returns Promise\<object\>:**
 
-| key      | description                                                                                             |
-| -------- | ------------------------------------------------------------------------------------------------------- |
-| `app`    | The [express](https://expressjs.com/en/4x/api.html#app) instance                                        |
-| `http`   | The [http server](https://nodejs.org/api/http.html#class-httpserver) instance                           |
-| `db`     | The [database](https://github.com/vocascan/vocascan-server/blob/main/database/index.js) instance        |
-| `logger` | The [logger](https://github.com/vocascan/vocascan-server/blob/main/app/config/logger/index.js) instance |
-| `config` | The accumulated config used to run the vocascan server                                                  |
+| key                                        | description                                                                                             |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| `start({ migrate = true }): Promise<void>` | Starts the server.                                                                                      |
+| `stop(): Promise<void>`                    | Stops the server.                                                                                       |
+| `migrate(): Promise<void>`                 | Migrates the database if needed.                                                                        |
+| `app`                                      | The [express](https://expressjs.com/en/4x/api.html#app) instance                                        |
+| `http`                                     | The [http server](https://nodejs.org/api/http.html#class-httpserver) instance                           |
+| `db`                                       | The [database](https://github.com/vocascan/vocascan-server/blob/main/database/index.js) instance        |
+| `logger`                                   | The [logger](https://github.com/vocascan/vocascan-server/blob/main/app/config/logger/index.js) instance |
+| `config`                                   | The accumulated config used to run the vocascan server                                                  |
 
 ### version
 
