@@ -20,7 +20,7 @@ the server object created previously. With that system it's also possible to sto
 with other middlewares or request handlers.
 
 This example creates and starts a vocascan-server on port `8989` with an in-memory sqlite database, a colorized console
-sql logger and a new route `/hello-world`. After two seconds the server stops imminently.
+sql logger and a new route `/hello-world`. After two seconds the server stops immediately.
 
 ```js
 const { createServer, version } = require("@vocascan/server");
@@ -92,4 +92,4 @@ This creates a server object with the following contents.
 
 ### version
 
-This export holds the server version, defined in the package.json file of `@vocascan/server`.
+This export holds the server version, defined in the package.json file of `@vocascan/server` (e.g. `"1.1.0"`).
