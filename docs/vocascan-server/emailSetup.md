@@ -41,7 +41,7 @@ hosted version like MailCatcher.
 > in a web interface. Run mailcatcher, set your favourite app to deliver to smtp://127.0.0.1:1025 instead of your
 > default SMTP server, then check out http://127.0.0.1:1080 to see the mail that's arrived so far.
 
-1. Start MailCatcher inside of a docker container
+1. Start MailCatcher inside a docker container
 
    ```yml
    version: "3"
