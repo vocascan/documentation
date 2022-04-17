@@ -5,6 +5,9 @@
 You can directly use the SMTP server from an external email provider like shown below.
 
 ```js
+  server: {
+    base_url: "http://localhost:5000"
+  },
   mailer: {
     enabled: true,
     host: 'smtp.example.com',
@@ -19,6 +22,9 @@ You can directly use the SMTP server from an external email provider like shown 
     email_confirm: true,
   },
 ```
+
+!> Please make sure, that `server.base_url` is set correctly, otherwise the verification links in the email are not
+correct.
 
 ## Developing with Email
 
