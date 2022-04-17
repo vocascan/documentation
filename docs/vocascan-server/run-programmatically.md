@@ -16,8 +16,8 @@ npm i @vocascan/server
 
 Import the `@vocascan/server` package, create and start the server. The first argument is an object containing your
 config described in [configuration](vocascan-server/configuration). This function returns a Promise that resolves with
-the server object created previously. With that system it's also possible to stop that server afterwards or extend it
-with other middlewares or request handlers.
+the server object created previously. With that system it's also possible to stop that server afterwards or run the
+migrations manually.
 
 This example creates and starts a vocascan-server on port `8989` with an in-memory sqlite database, a colorized console
 sql logger and a new route `/hello-world`. After two seconds the server stops immediately.
@@ -28,31 +28,22 @@ const { createServer, version } = require("@vocascan/server");
 (async () => {
   console.log(`Server version: ${version}`);
 
-  const server = await createServer(
-    {
-      server: {
-        port: 8989,
-        jwt_secret: "123",
-      },
-      database: {
-        dialect: "sqlite",
-        storage: ":memory:",
-      },
-      log: {
-        console: {
-          colorize: true,
-          enable_sql_log: true,
-        },
+  const server = await createServer({
+    server: {
+      port: 8989,
+      jwt_secret: "123",
+    },
+    database: {
+      dialect: "sqlite",
+      storage: ":memory:",
+    },
+    log: {
+      console: {
+        colorize: true,
+        enable_sql_log: true,
       },
     },
-    {
-      preLoad: (server) => {
-        server.app.get("/hello-world", (_req, res) => {
-          res.send("Hello World");
-        });
-      },
-    }
-  );
+  });
 
   await server.start();
 
@@ -72,10 +63,9 @@ This creates a server object with the following contents.
 
 **Arguments:**
 
-| key               | description                                                                                                     |
-| ----------------- | --------------------------------------------------------------------------------------------------------------- |
-| `config`          | Configuration object, see the [configuration](vocascan-server/configuration) guide.                             |
-| `options.preLoad` | Function the will be executed before adding the 404 and error handlers to extend the server with custom routes. |
+| key      | description                                                                         |
+| -------- | ----------------------------------------------------------------------------------- |
+| `config` | Configuration object, see the [configuration](vocascan-server/configuration) guide. |
 
 **Returns Promise\<object\>:**
 
