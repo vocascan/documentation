@@ -17,13 +17,17 @@ Example theme (`my-theme.css`):
 
 ```css
 :root {
-    --background-color: #fff;
-    /* Further configuration... */
+  --background-color: #fff;
+  /* Further configuration... */
 }
 ```
 
 Mounting the `themes/` directory:
 
-```bash
-docker run -v ./themes:/usr/share/nginx/html/themes ...
+```yml
+services:
+  frontend:
+    # ...
+    volumes:
+      - ./themes:/usr/share/nginx/html/public
 ```
