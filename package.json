@@ -28,6 +28,7 @@
   "homepage": "https://github.com/vocascan/documentation#readme",
   "dependencies": {
     "docsify": "^4.12.1",
+    "docsify-cli": "^4.4.4",
     "markdownlint-cli": "^0.27.1",
     "prettier": "^2.3.0"
   }
