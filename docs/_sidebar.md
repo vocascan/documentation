@@ -38,6 +38,7 @@
   - [Command Line Interface](vocascan-server/cli.md)
   - [Custom Pages](vocascan-server/customPages.md)
   - [Email Setup](vocascan-server/emailSetup.md)
+  - [Run Programmatically](vocascan-server/run-programmatically.md)
   - [Contribute](vocascan-server/contribute.md)
   - [Changelog](vocascan-server/changelog.md)
 
