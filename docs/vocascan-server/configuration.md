@@ -43,13 +43,13 @@ There are 2 ways to configure a vocascan-server.
 
 ## Server (`server`)
 
-| Name                  | Default | Description                                                                                                                                                                                                         |
-| --------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `port`                | `5000`  | Defines the port on which the server is listening.                                                                                                                                                                  |
-| `jwt_secret`          |         | Secret is used to sign the payload of the jwt token, change this to a unique string. Everyone who knows that secret is able to act as other vocascan users.                                                         |
-| `salt_rounds`         | `10`    | The salt rounds define the coast efficiency factor to hash passwords with bcrypt. For more info, see [bcrypts documentation](https://github.com/kelektiv/node.bcrypt.js#a-note-on-rounds).                          |
-| `registration_locked` | `false` | Locks the server and only allows registrations with an invite code.                                                                                                                                                 |
-| `cors`                | `false` | This can be either a boolean (`true`/`false`), a string with a single domain (`http://localhost:3000`) or a asterisk (`*`) to allow all domains, or a array (`["http://localhost:3000", "http://localhost:4000"]`). |
+| Name          | Default | Description                                                                                                                                                                                                         |
+| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `base_url`    |         | Base url of the API server. Used for links in emails. (E.g. `http://example.com`)                                                                                                                                   |
+| `port`        | `5000`  | Defines the port on which the server is listening.                                                                                                                                                                  |
+| `jwt_secret`  |         | Secret is used to sign the payload of the jwt token, change this to a unique string. Everyone who knows that secret is able to act as other vocascan users.                                                         |
+| `salt_rounds` | `10`    | The salt rounds define the coast efficiency factor to hash passwords with bcrypt. For more info, see [bcrypts documentation](https://github.com/kelektiv/node.bcrypt.js#a-note-on-rounds).                          |
+| `cors`        | `false` | This can be either a boolean (`true`/`false`), a string with a single domain (`http://localhost:3000`) or a asterisk (`*`) to allow all domains, or a array (`["http://localhost:3000", "http://localhost:4000"]`). |
 
 ## Database (`database`)
 
@@ -124,3 +124,26 @@ For more information about the logger section see [logging guide](vocascan-serve
 | Name             | Default | Description                                   |
 | ---------------- | ------- | --------------------------------------------- |
 | `enable_swagger` | `true`  | Enables serving of the swagger documentation. |
+
+## Mailer (`mailer`)
+
+| Name        | Default | Description                                                                                                                                                                                                                                       |
+| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `enabled`   | `false` | Enable/Disable mailer.                                                                                                                                                                                                                            |
+| `host`      |         | Email server host.                                                                                                                                                                                                                                |
+| `port`      |         | Email server port.                                                                                                                                                                                                                                |
+| `secure`    | `false` | If `true` the connection will use TLS when connecting to server, otherwise TLS is used if server supports the `STARTTLS` extension. In most cases set this value to `true` if you are connecting to port 465. For port 587 or 25 keep it `false`. |
+| `auth.user` |         | Email server user.                                                                                                                                                                                                                                |
+| `auth.pass` |         | Email server password.                                                                                                                                                                                                                            |
+| `from`      | `false` | The email address of vocascan should use a the sender.                                                                                                                                                                                            |
+
+## Service (`service`)
+
+| Name                      | Default  | Description                                                                                                                                                                                                                                         |
+| ------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `invite_code`             | `false`  | Locks the server and only allows registrations with an invite code.                                                                                                                                                                                 |
+| `email_confirm`           | `false`  | Enables email confirmation.                                                                                                                                                                                                                         |
+| `email_confirm_live_time` | `2h`     | Defines the time how long the link in the email is valid. This option is parsed with [ms](https://github.com/vercel/ms) (E.g. `2d`, `2.5h`, `30d`, ...)                                                                                             |
+| `email_confirm_level`     | `medium` | Define what a user can do if the account is not verified. `low` - no restrictions, `medium` - user can use vocascan for a specific time set by `service.email_confirm_time`, `high` - user cannot do anything except logging in.                    |
+| `email_confirm_time`      | `14d`    | Defines the time a user can use vocascan without restrictions without verification. (Takes only effect, if `service.email_confirm_level` is `medium`) This option is parsed with [ms](https://github.com/vercel/ms) (E.g. `2d`, `2.5h`, `30d`, ...) |
+| `access_live_time`        | `30d`    | Defines the time how long a jwt access token is valid. This option is parsed with [ms](https://github.com/vercel/ms) (E.g. `2d`, `2.5h`, `30d`, ...)                                                                                                |

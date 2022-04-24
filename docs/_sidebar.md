@@ -37,6 +37,7 @@
   - [Logging](vocascan-server/logging.md)
   - [Command Line Interface](vocascan-server/cli.md)
   - [Custom Pages](vocascan-server/customPages.md)
+  - [Email Setup](vocascan-server/emailSetup.md)
   - [Contribute](vocascan-server/contribute.md)
   - [Changelog](vocascan-server/changelog.md)
 
