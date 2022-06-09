@@ -65,7 +65,7 @@ Update a user.
 - `-p`, `--password <password>` - new password (don't set if you don't want to change the user's password)
 - `-r`, `--role <name>` - new role (don't set if you don't want to change the user's role)
 - `--emailVerified <true|false>` - set email verification state of a user
-- `--disabled <true|false>` - disable a user account 
+- `--disabled <true|false>` - deactivate a user account 
 
 **Examples**
 
