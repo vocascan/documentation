@@ -35,6 +35,9 @@ frontend:
 
 To configure your vocascan-frontend to match for your needs, you can use environment variables. You can use all
 configuration options described in the [configuration](vocascan-frontend/configuration) page prefixed with `VOCASCAN_`.
+You can also mount a config file into the `public/` directory, but note that you have to place the config into the
+existing `JSON.parse` block. Environment variables and a config file can be used at the same time, but keys in the
+config file can be overriden by environment variables.
 
 If you host a vocascan-frontend web service, you may want to set the `BASE_URL` so that the frontend is directly
 associated with the backend and the user has no possibility to change the server URL, as it can be done in the desktop
