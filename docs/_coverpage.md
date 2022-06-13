@@ -2,7 +2,7 @@
 
 ![logo](_media/logo/color-round.svg ":size=15%")
 
-# VOCASCAN <small>1.1.0</small>
+# VOCASCAN <small>1.3.0</small>
 
 > A highly configurable vocabulary trainer.
 
