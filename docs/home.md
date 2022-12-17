@@ -73,6 +73,6 @@ known issues).
 
 ## Contact
 
-Vocascan - [@vocascan](https://twitter.com/vocascan) - vocascan@gmail.com - [Discord](http://discord.vocascan.com)
+Vocascan - [@vocascan](https://twitter.com/vocascan) - support@vocascan.com - [Discord](http://discord.vocascan.com)
 
 Project Link: [https://github.com/vocascan/vocascan-desktop](https://github.com/vocascan/vocascan-desktop)
