@@ -43,13 +43,14 @@ There are 2 ways to configure a vocascan-server.
 
 ## Server (`server`)
 
-| Name          | Default | Description                                                                                                                                                                                                         |
-| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `base_url`    |         | Base url of the API server. Used for links in emails. (E.g. `http://example.com`)                                                                                                                                   |
-| `port`        | `5000`  | Defines the port on which the server is listening.                                                                                                                                                                  |
-| `jwt_secret`  |         | Secret is used to sign the payload of the jwt token, change this to a unique string. Everyone who knows that secret is able to act as other vocascan users.                                                         |
-| `salt_rounds` | `10`    | The salt rounds define the coast efficiency factor to hash passwords with bcrypt. For more info, see [bcrypts documentation](https://github.com/kelektiv/node.bcrypt.js#a-note-on-rounds).                          |
-| `cors`        | `false` | This can be either a boolean (`true`/`false`), a string with a single domain (`http://localhost:3000`) or a asterisk (`*`) to allow all domains, or a array (`["http://localhost:3000", "http://localhost:4000"]`). |
+| Name            | Default | Description                                                                                                                                                                                                         |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `base_url`      |         | Base url of the API server. Used for links in emails. (E.g. `http://example.com`)                                                                                                                                   |
+| `port`          | `5000`  | Defines the port on which the server is listening.                                                                                                                                                                  |
+| `jwt_secret`    |         | Secret is used to sign the payload of the jwt token, change this to a unique string. Everyone who knows that secret is able to act as other vocascan users.                                                         |
+| `salt_rounds`   | `10`    | The salt rounds define the coast efficiency factor to hash passwords with bcrypt. For more info, see [bcrypts documentation](https://github.com/kelektiv/node.bcrypt.js#a-note-on-rounds).                          |
+| `cors`          | `false` | This can be either a boolean (`true`/`false`), a string with a single domain (`http://localhost:3000`) or a asterisk (`*`) to allow all domains, or a array (`["http://localhost:3000", "http://localhost:4000"]`). |
+| max_file_upload | `1mb`      | The maximum file size that can be uploaded at vocabulary imports |
 
 ## Database (`database`)
 
